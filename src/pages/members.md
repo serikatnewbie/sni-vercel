@@ -55,6 +55,7 @@ title: "Members"
       <p class="text-sm">just broke up with Mizuhara Chizuru</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">for</span>
+        <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">blockchain</span>
       </div>
     </div>
   </div>
