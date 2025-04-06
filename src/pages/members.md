@@ -111,14 +111,18 @@ title: "Members"
 
   <!-- Member 9 -->
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
-    <img src="https://serikatnewbie.github.io/static/images/avatar/player3.png" alt="dapatdkaktip" class="w-16 h-16 rounded-full">
+    <img src="/avatars/dapa.png" alt="dapatdkaktip" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">dapatdkaktip</h3>
-      <p class="text-sm">didnt received the registration confirmation email</p>
+      <p class="text-sm">didnt receive the registration confirmation email</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-pink-200 text-pink-800 text-xs font-semibold px-2 py-0.5 rounded">web</span>
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
+        <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">misc</span>
       </div>
+      <p class="text-xs text-gray-600 mt-1">
+        🌐 <a href="https://dapthehuman.xyz/" target="_blank" class="text-blue-600 hover:underline">Blog</a>
+      </p>
     </div>
   </div>
 
