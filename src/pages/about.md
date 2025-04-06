@@ -2,10 +2,7 @@
 layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
-
-## SNI Cybersecurity Team
-
-Serikat Newbie Indonesia is a dedicated CTF team consisting of 12 highly motivated individuals who actively participate in both national and international cybersecurity competitions. Our team members share a deep passion for cybersecurity and are committed to continuously enhancing their skills and knowledge in this ever-evolving field.
+SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated individuals who actively participate in both national and international cybersecurity competitions. Our team members share a deep passion for cybersecurity and are committed to continuously enhancing their skills and knowledge in this ever-evolving field.
 
 ### Team Members
 
