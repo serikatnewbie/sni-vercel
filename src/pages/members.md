@@ -116,7 +116,7 @@ title: "Members"
       <h3 class="font-bold">dapatdkaktip</h3>
       <p class="text-sm">didnt receive the registration confirmation email</p>
       <div class="flex flex-wrap gap-1 mt-1">
-        <span class="bg-pink-200 text-pink-800 text-xs font-semibold px-2 py-0.5 rounded">web</span>
+        <span class="bg-red-200 text-red-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
         <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">misc</span>
       </div>
