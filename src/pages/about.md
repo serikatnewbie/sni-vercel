@@ -155,7 +155,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting highly motivated indiv
       <h3 class="font-bold">Kiaraa</h3>
       <p class="text-sm">agoy</p>
       <div class="flex flex-wrap gap-1 mt-1">
-        <span class="bg-pink-200 text-pink-800 text-xs font-semibold px-2 py-0.5 rounded">cry</span>
+        <span class="bg-cyan-200 text-cyan-800 text-xs font-semibold px-2 py-0.5 rounded">cry</span>
       </div>
       <!-- <p class="text-xs text-gray-600 mt-1">
         🌐 <a href="https://dapatdkaktip.dev" target="_blank" class="text-blue-600 hover:underline">dapatdkaktip.dev</a>
