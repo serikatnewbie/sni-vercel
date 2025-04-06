@@ -10,7 +10,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
   <!-- Member 1 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="./avatars/keii.jpg" alt="Member 1" class="w-16 h-16 rounded-full">
+    <img src="avatars/keii.jpg" alt="Member 1" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">k.eii</h3>
       <p class="text-sm">coffee addict</p>
@@ -19,7 +19,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
   </div>
   <!-- Member 2 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="./avatars/itoid.jpg" alt="Member 2" class="w-16 h-16 rounded-full">
+    <img src="avatars/itoid.jpg" alt="Member 2" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">itoid</h3>
       <p class="text-sm">pwn enthusiast</p>
@@ -28,7 +28,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
   </div>
   <!-- Member 3 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="./avatars/3.png" alt="Member 3" class="w-16 h-16 rounded-full">
+    <img src="avatars/msfir.png" alt="Member 3" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">msfir</h3>
       <p class="text-sm">nungguin pengumuman ctf ampe pagi</p>
@@ -37,7 +37,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
   </div>
   <!-- Member 4 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="./avatars/4.png" alt="Member 4" class="w-16 h-16 rounded-full">
+    <img src="avatars/darmodarr.png" alt="Member 4" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">Darmodarr</h3>
       <p class="text-sm">sudah putus hubungan sama chizuru</p>
@@ -46,7 +46,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
   </div>
   <!-- Member 5 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="./avatars/5.png" alt="Member 5" class="w-16 h-16 rounded-full">
+    <img src="avatars/flab.png" alt="Member 5" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">FlaB</h3>
       <p class="text-sm">the next kosong</p>
@@ -55,7 +55,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
   </div>
   <!-- Member 6 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="./avatars/6.png" alt="Member 6" class="w-16 h-16 rounded-full">
+    <img src="avatars/yellow.png" alt="Member 6" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">yellow</h3>
       <p class="text-sm">kena frenk</p>
@@ -64,7 +64,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
   </div>
   <!-- Member 7 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="./avatars/7.png" alt="Member 7" class="w-16 h-16 rounded-full">
+    <img src="avatars/azuketto.png" alt="Member 7" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">azuketto</h3>
       <p class="text-sm">🥶</p>
@@ -73,16 +73,16 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
   </div>
   <!-- Member 8 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="./avatars/8.png" alt="Member 8" class="w-16 h-16 rounded-full">
+    <img src="avatars/bengsky.png" alt="Member 8" class="w-16 h-16 rounded-full">
     <div>
-      <h3 class="font-bold">bengsky</h3>
+      <h3 class="font-bold">Bengsky</h3>
       <p class="text-sm">tukang hek goto</p>
       <p class="text-sm">web</p>
     </div>
   </div>
   <!-- Member 9 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="./avatars/9.png" alt="Member 9" class="w-16 h-16 rounded-full">
+    <img src="avatars/dapatdkaktip.png" alt="Member 9" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">dapatdkaktip</h3>
       <p class="text-sm">didnt received the registration confirmation email</p>
