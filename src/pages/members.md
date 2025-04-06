@@ -1,10 +1,7 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "About"
+title: "Members"
 ---
-
-SNI Cybersecurity Team is a dedicated CTF team consisting highly motivated individuals who actively participate in both national and international cybersecurity competitions. Our team members share a deep passion for cybersecurity and are committed to continuously enhancing their skills and knowledge in this ever-evolving field.
-
 ### Active Members
 
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
