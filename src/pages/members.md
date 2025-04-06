@@ -113,7 +113,7 @@ title: "Members"
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
     <img src="/avatars/dapa.png" alt="dapatdkaktip" class="w-16 h-16 rounded-full">
     <div>
-      <h3 class="font-bold">dapatdkaktip</h3>
+      <h3 class="font-bold">daptheHuman</h3>
       <p class="text-sm">didnt receive the registration confirmation email</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-red-200 text-red-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
