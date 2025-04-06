@@ -27,38 +27,36 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
         SNI Cybersecurity Team
       </h1>
+      <a
+        target="_blank"
+        href="/rss.xml"
+        class="inline-block"
+        aria-label="rss feed"
+        title="RSS Feed"
+      >
+        <IconRss
+          width={20}
+          height={20}
+          class="scale-125 stroke-accent stroke-3"
+        />
+        <span class="sr-only">RSS Feed</span>
+      </a>
 
       <p>
-        SNI Cybersecurity Team is a dedicated CTF team consisting of highly motivated individuals who actively participate in both national and international cybersecurity competitions. Our team members share a deep passion for cybersecurity and are committed to continuously enhancing their skills and knowledge in this ever-evolving field.
+        SNI Cybersecurity Team is a dedicated CTF team consisting highly motivated individuals
+        who actively participate in both national and international cybersecurity competitions.
+        Our team members share a deep passion for cybersecurity and are committed to
+        continuously enhancing their skills and knowledge in this ever-evolving field.
       </p>
-
-      <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
-        <div class="mr-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
-        <div class="flex flex-wrap gap-4">
-          <a
-            href="https://www.linkedin.com/company/serikatnewbie-id"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline hover:text-accent"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="https://github.com/serikatnewbie"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline hover:text-accent"
-          >
-            GitHub
-          </a>
-          <a
-            href="mailto:serikatnewbie.id@gmail.com"
-            class="underline hover:text-accent"
-          >
-            Email
-          </a>
-        </div>
-      </div>
+      {
+        // only display if at least one social link is enabled
+        SOCIALS.length > 0 && (
+          <div class="mt-4 flex flex-col sm:flex-row sm:items-center">
+            <div class="mr-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
+            <Socials />
+          </div>
+        )
+      }
     </section>
 
     <Hr />
