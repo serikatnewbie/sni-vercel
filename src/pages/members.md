@@ -65,7 +65,7 @@ title: "Members"
     <img src="https://serikatnewbie.github.io/static/images/avatar/player3.png" alt="FlaB" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">FlaB</h3>
-      <p class="text-sm">the next kosong</p>
+      <p class="text-sm">this dude will wipe out all your challs</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
         <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">blockchain</span>
@@ -131,7 +131,7 @@ title: "Members"
     <img src="https://serikatnewbie.github.io/static/images/avatar/player11.webp" alt="kiaraa" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">Kiaraa</h3>
-      <p class="text-sm">Penggemar FlaB cabang IPB</p>
+      <p class="text-sm">agoy > math kids fr</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-cyan-200 text-cyan-800 text-xs font-semibold px-2 py-0.5 rounded">cry</span>
       </div>
