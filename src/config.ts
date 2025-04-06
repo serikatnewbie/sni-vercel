@@ -3,7 +3,7 @@ export const SITE = {
   author: "SNI",
   profile: "https://serikatnewbie.vercel.app/",
   desc: "Ora CTF yo Sakau",
-  title: "SNI Cybersecurity Team",
+  title: "SNI",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 4,
