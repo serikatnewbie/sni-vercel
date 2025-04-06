@@ -16,12 +16,6 @@ export const SOCIALS = [
     icon: IconGitHub,
   },
   {
-    name: "X",
-    href: "https://x.com/username",
-    linkTitle: `${SITE.title} on X`,
-    icon: IconBrandX,
-  },
-  {
     name: "LinkedIn",
     href: "https://www.linkedin.com/company/serikatnewbie-id",
     linkTitle: `${SITE.title} on LinkedIn`,
