@@ -10,7 +10,7 @@ title: "Members"
     <img src="/avatars/keii.jpg" alt="k.eii" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">k.eii</h3>
-      <p class="text-sm">coffee addict</p>
+      <p class="text-sm">doing ml is lot easier than doing osint</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">for</span>
         <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">misc</span>
@@ -39,7 +39,7 @@ title: "Members"
     <img src="https://serikatnewbie.github.io/static/images/avatar/player8.jpg" alt="msfir" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">msfir</h3>
-      <p class="text-sm">waiting for ctf winner announcement till morning</p>
+      <p class="text-sm">25k++ professional yapper</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-red-200 text-red-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
@@ -78,7 +78,7 @@ title: "Members"
     <img src="https://avatars.githubusercontent.com/u/86491005?v=4" alt="yellow" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">yellow</h3>
-      <p class="text-sm">frenkie</p>
+      <p class="text-sm">pura pura lemah tapi sebenarnya raja kripto</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-cyan-200 text-cyan-800 text-xs font-semibold px-2 py-0.5 rounded">cry</span>
       </div>
@@ -102,7 +102,7 @@ title: "Members"
     <img src="https://serikatnewbie.github.io/static/images/avatar/player4.webp" alt="Bengsky" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">Bengsky</h3>
-      <p class="text-sm">GoTo group hacker</p>
+      <p class="text-sm">only 22, but already have joint pain</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-pink-200 text-pink-800 text-xs font-semibold px-2 py-0.5 rounded">web</span>
       </div>
@@ -131,7 +131,7 @@ title: "Members"
     <img src="https://serikatnewbie.github.io/static/images/avatar/player11.webp" alt="kiaraa" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">Kiaraa</h3>
-      <p class="text-sm">agoy</p>
+      <p class="text-sm">Penggemar FlaB cabang IPB</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-cyan-200 text-cyan-800 text-xs font-semibold px-2 py-0.5 rounded">cry</span>
       </div>
