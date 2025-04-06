@@ -54,8 +54,8 @@
      id="layer1">
     <path
        id="rect847"
-       style="fill:none;stroke:#FFFFFF;stroke-width:10;stroke-linecap:round;stroke-linejoin:round"
+       style="fill:none;stroke:#FFF;stroke-width:23;stroke-linecap:round;stroke-linejoin:round"
        d="M 0 0 L 137.95312 188.97656 L 0 377.95312 L 377.95312 377.95312 L 377.95312 0 L 0 0 z M 199.44336 132.29102 L 315.8125 132.29102 L 315.8125 248.6582 L 199.44336 248.6582 L 199.44336 140.79492 L 199.44336 132.29102 z M 216.45117 149.29883 L 216.45117 231.65039 L 298.80469 231.65039 L 298.80469 149.29883 L 238.2793 149.29883 L 277.23438 190.02539 L 242.75391 224.50586 L 232.06445 213.81641 L 256.08594 189.78906 L 217.35742 149.29883 L 216.45117 149.29883 z"
-       transform="scale(0.26458333)" />
+       transform="scale(0.16458333)" />
   </g>
 </svg>
