@@ -3,14 +3,14 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated individuals who actively participate in both national and international cybersecurity competitions. Our team members share a deep passion for cybersecurity and are committed to continuously enhancing their skills and knowledge in this ever-evolving field.
+SNI Cybersecurity Team is a dedicated CTF team consisting highly motivated individuals who actively participate in both national and international cybersecurity competitions. Our team members share a deep passion for cybersecurity and are committed to continuously enhancing their skills and knowledge in this ever-evolving field.
 
-### Team Members
+### Active Members
 
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
   <!-- Member 1 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="avatars/keii.jpg" alt="k.eii" class="w-16 h-16 rounded-full">
+    <img src="/avatars/keii.jpg" alt="k.eii" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">k.eii</h3>
       <p class="text-sm">coffee addict</p>
@@ -19,14 +19,14 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
         <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">misc</span>
       </div>
       <p class="text-xs text-gray-600 mt-1">
-        🌐 <a href="https://k-eii.me" target="_blank" class="text-blue-600 hover:underline">k-eii.me</a>
+        🌐 <a href="https://keii.codes" target="_blank" class="text-blue-600 hover:underline">Blog</a>
       </p>
     </div>
   </div>
 
   <!-- Member 2 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="avatars/itoid.jpg" alt="itoid" class="w-16 h-16 rounded-full">
+    <img src="/avatars/itoid.jpg" alt="itoid" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">itoid</h3>
       <p class="text-sm">pwn enthusiast</p>
@@ -42,7 +42,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
 
   <!-- Member 3 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="avatars/msfir.png" alt="msfir" class="w-16 h-16 rounded-full">
+    <img src="/avatars/msfir.png" alt="msfir" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">msfir</h3>
       <p class="text-sm">waiting for ctf winner announcement till morning</p>
@@ -58,7 +58,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
 
   <!-- Member 4 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="avatars/darmodarr.png" alt="Darmodarr" class="w-16 h-16 rounded-full">
+    <img src="/avatars/darmodarr.png" alt="Darmodarr" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">Darmodarr</h3>
       <p class="text-sm">just broke up with Mizuhara Chizuru</p>
@@ -73,7 +73,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
 
   <!-- Member 5 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="avatars/flab.png" alt="FlaB" class="w-16 h-16 rounded-full">
+    <img src="/avatars/flab.png" alt="FlaB" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">FlaB</h3>
       <p class="text-sm">the next kosong</p>
@@ -89,7 +89,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
 
   <!-- Member 6 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="avatars/yellow.png" alt="yellow" class="w-16 h-16 rounded-full">
+    <img src="/avatars/yellow.png" alt="yellow" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">yellow</h3>
       <p class="text-sm">frenkie</p>
@@ -104,7 +104,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
 
   <!-- Member 7 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="avatars/azuketto.png" alt="azuketto" class="w-16 h-16 rounded-full">
+    <img src="/avatars/azuketto.png" alt="azuketto" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">azuketto</h3>
       <p class="text-sm">🥶</p>
@@ -119,7 +119,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
 
   <!-- Member 8 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="avatars/bengsky.png" alt="Bengsky" class="w-16 h-16 rounded-full">
+    <img src="/avatars/bengsky.png" alt="Bengsky" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">Bengsky</h3>
       <p class="text-sm">GoTo group hacker</p>
@@ -134,7 +134,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting of 12 highly motivated
 
   <!-- Member 9 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="avatars/dapatdkaktip.png" alt="dapatdkaktip" class="w-16 h-16 rounded-full">
+    <img src="/avatars/dapatdkaktip.png" alt="dapatdkaktip" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">dapatdkaktip</h3>
       <p class="text-sm">didnt received the registration confirmation email</p>
