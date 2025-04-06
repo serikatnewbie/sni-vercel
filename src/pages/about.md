@@ -89,7 +89,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting highly motivated indiv
 
   <!-- Member 6 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="/avatars/yellow.png" alt="yellow" class="w-16 h-16 rounded-full">
+    <img src="https://avatars.githubusercontent.com/u/86491005?v=4" alt="yellow" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">yellow</h3>
       <p class="text-sm">frenkie</p>
@@ -134,7 +134,7 @@ SNI Cybersecurity Team is a dedicated CTF team consisting highly motivated indiv
 
   <!-- Member 9 -->
   <div class="flex items-center space-x-4 p-4 border rounded-lg">
-    <img src="/avatars/dapatdkaktip.png" alt="dapatdkaktip" class="w-16 h-16 rounded-full">
+    <img src="https://serikatnewbie.github.io/static/images/avatar/player3.png" alt="dapatdkaktip" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">dapatdkaktip</h3>
       <p class="text-sm">didnt received the registration confirmation email</p>
