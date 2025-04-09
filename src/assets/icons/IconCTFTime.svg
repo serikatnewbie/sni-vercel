@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 39.7 36.9">
-  <style>
-    .st0 { fill: #E3000B; }
-    .st1 { fill: #FFFFFF; }
-  </style>
-  <g id="Layer_1" transform="translate(-135.54, -21.02)">
-    <path class="st1" d="M135.54,21.02v36.9h39.7v-36.9H135.54z M169.83,52.89h-28.87V26.05h28.87V52.89z"/>
-    <polygon class="st1" points="153.91,39.38 147.8,45.48 151.83,49.05 161.24,39.65 145.16,23.57 138.1,23.57"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="135.5 19 40 40"> <path fill="currentColor" d="M135.54,21.02v36.9h39.7v-36.9H135.54z M169.83,52.89h-28.87V26.05h28.87V52.89z"></path> <polygon fill="currentColor" points="153.91,39.38 147.8,45.48 151.83,49.05 161.24,39.65 145.16,23.57 138.1,23.57 	"></polygon> </svg>
