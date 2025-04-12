@@ -5,12 +5,12 @@ title: "Achievements"
 
 ## 🥇 Champions 👑
 
-| Contest                                | Desc                                   |
-|----------------------------------------|----------------------------------------|
-| 🥇 Cyber Jawara International (2024) 👑     | Merger as TCP1P x SNI x MAGER            |
-| 🥇 BackdoorCTF 2024 👑                      | Merger as ADA INDONESIA COY              |
-| 🥇 BreachCTF 2025 👑                        | as SNI                                       |
-| 🥇 TAMUctf 2025 👑                          | as SNI                                       |
+| Contest                                |
+|----------------------------------------|
+| 🥇 Cyber Jawara International (2024) 👑 - Merger as TCP1P x SNI x MAGER |
+| 🥇 BackdoorCTF 2024 👑 - Merger as ADA INDONESIA COY | 
+| 🥇 BreachCTF 2025 👑|
+| 🥇 TAMUctf 2025 👑 |
 
 ## 📈 Notable High Placements
 
