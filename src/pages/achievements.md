@@ -11,6 +11,7 @@ title: "Achievements"
 | 🥇 BackdoorCTF 2024 👑 - Merger as ADA INDONESIA COY | 
 | 🥇 BreachCTF 2025 👑|
 | 🥇 TAMUctf 2025 👑 |
+| 🥇 1753CTF 2025 👑 |
 
 ## 📈 Notable High Placements
 
