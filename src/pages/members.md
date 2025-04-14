@@ -13,7 +13,7 @@ title: "Members"
       <p class="text-sm">doing ml is lot easier than doing osint</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">for</span>
-        <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">misc</span>
+        <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">ai/ml</span>
       </div>
       <p class="text-xs text-gray-600 mt-1">
         🌐 <a href="https://keii.codes" target="_blank" class="text-blue-600 hover:underline">Blog</a>
