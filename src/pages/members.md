@@ -90,7 +90,7 @@ title: "Members"
     <img src="https://serikatnewbie.github.io/static/images/avatar/player5.webp" alt="azuketto" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">azuketto</h3>
-      <p class="text-sm">🥶</p>
+      <p class="text-sm">Abydos cultist</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-cyan-200 text-cyan-800 text-xs font-semibold px-2 py-0.5 rounded">cry</span>
       </div>
