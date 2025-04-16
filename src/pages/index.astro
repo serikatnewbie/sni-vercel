@@ -12,6 +12,7 @@ import IconRss from "@/assets/icons/IconRss.svg";
 import IconArrowRight from "@/assets/icons/IconArrowRight.svg";
 import { SITE } from "@/config";
 import { SOCIALS } from "@/constants";
+import placements from "@/data/ctftime/ctf_placement.json" assert { type: "json" };
 
 const posts = await getCollection("blog");
 
@@ -51,6 +52,17 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
       In addition to competing, we provide specialized services to CTF event organizers, such as
       challenge creation and infrastructure management, as well as CTF mentoring across various categories.
       </p>
+      <div class="mt-6 mb-4">
+        Furthermore, according to CTFtime, SNI achieved the following placements:
+        {
+          placements.toReversed().map((placement, _) => (
+            <li class="items-center mt-1">
+              In {placement.year}, SNI is ranked&nbsp;<span class="font-bold text-emerald-600 dark:text-emerald-400">#{placement.place}</span>&nbsp;in the world and&nbsp;<span class="font-bold text-emerald-600 dark:text-emerald-400">#{placement.countryPlace}</span>&nbsp;in Indonesia.
+            </li>
+          ))
+        }
+      </div>
+      
       {
         // only display if at least one social link is enabled
         SOCIALS.length > 0 && (
@@ -94,8 +106,8 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
     }
 
     <div class="my-8 text-center">
-      <LinkButton href="/posts/">
-        All Posts
+      <LinkButton href="/achievements/">
+        Achievements
         <IconArrowRight class="inline-block" />
       </LinkButton>
     </div>

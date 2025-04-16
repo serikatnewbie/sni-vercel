@@ -1,0 +1,63 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Main from "@/layouts/Main.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import contests from "@/data/ctftime/ctf_events.json" assert { type: "json" };
+---
+
+<Layout>
+  <Header />
+  <Main pageTitle="Contests" pageDesc="CTF events and rating points of SNI based on CTFtime.org">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+      <table class="w-full text-sm text-left text-gray-800 dark:text-gray-300">
+        <thead class="text-xs uppercase bg-indigo-600 text-white sticky top-0 z-10">
+          <tr>
+            <th scope="col" class="px-6 py-3">Place</th>
+            <th scope="col" class="px-6 py-3">Event</th>
+            <th scope="col" class="px-6 py-3">Points</th>
+          </tr>
+        </thead>
+        <tbody>
+          {contests.map((contest, index) => (
+            <tr
+              class={`${
+                index % 2 === 0
+                  ? 'bg-white dark:bg-gray-800'
+                  : 'bg-gray-50 dark:bg-gray-900'
+              } border-b dark:border-gray-700 hover:bg-emerald-50 dark:hover:bg-gray-700 transition`}
+            >
+              <th
+                scope="row"
+                class="px-4 py-4 font-semibold text-gray-900 dark:text-white whitespace-nowrap"
+              >
+                <div class="flex flex-row items-center">
+                  <div class="w-6">
+                    {contest.place === "1" && "👑 "}
+                  {contest.place === "2" && "🥈 "}
+                  {contest.place === "3" && "🥉 "}
+                  </div>
+                  <div class="text-sm font-medium text-gray-900 dark:text-white">
+                    {contest.place}
+                  </div>
+
+                </div>
+              </th>
+              <td class="px-6 py-4"><a target="_blank" href={"https://ctftime.org/"+contest.href}>{contest.event}</a></td>
+              <td class="px-6 py-4">
+                <div class="text-emerald-600 dark:text-emerald-400">
+                  {contest.ratingPoints} rating points
+                </div>
+                <div class="text-blue-600 dark:text-blue-400">
+                  {Math.floor(Number(contest.ctfPoints))} CTF points
+                </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </Main>
+
+  <Footer />
+</Layout>

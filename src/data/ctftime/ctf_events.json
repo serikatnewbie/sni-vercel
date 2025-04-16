@@ -1,0 +1,639 @@
+[
+  {
+    "place": "1",
+    "event": "1753CTF 2025",
+    "ctfPoints": "3620.0000",
+    "ratingPoints": "69.640",
+    "href": "/event/2639"
+  },
+  {
+    "place": "1",
+    "event": "Breach CTF 2025",
+    "ctfPoints": "7290.0000",
+    "ratingPoints": "47.340",
+    "href": "/event/2671"
+  },
+  {
+    "place": "16",
+    "event": "squ1rrel CTF 2025",
+    "ctfPoints": "6622.0000",
+    "ratingPoints": "15.505",
+    "href": "/event/2708"
+  },
+  {
+    "place": "63",
+    "event": "Codegate CTF 2025 Preliminary",
+    "ctfPoints": "500.0000",
+    "ratingPoints": "7.260",
+    "href": "/event/2706"
+  },
+  {
+    "place": "1",
+    "event": "TAMUctf 2025",
+    "ctfPoints": "8989.0000",
+    "ratingPoints": "113.320",
+    "href": "/event/2681"
+  },
+  {
+    "place": "9",
+    "event": "Cyber Apocalypse CTF 2025: Tales from Eldoria",
+    "ctfPoints": "57025.0000",
+    "ratingPoints": "26.667",
+    "href": "/event/2674"
+  },
+  {
+    "place": "262",
+    "event": "UTCTF 2025",
+    "ctfPoints": "2284.0000",
+    "ratingPoints": "10.606",
+    "href": "/event/2641"
+  },
+  {
+    "place": "75",
+    "event": "TPCTF 2025",
+    "ctfPoints": "489.0000",
+    "ratingPoints": "1.482",
+    "href": "/event/2645"
+  },
+  {
+    "place": "20",
+    "event": "Pearl CTF",
+    "ctfPoints": "3600.0000",
+    "ratingPoints": "15.215",
+    "href": "/event/2647"
+  },
+  {
+    "place": "61",
+    "event": "PwnMe CTF Quals 2025",
+    "ctfPoints": "1455.0000",
+    "ratingPoints": "4.139",
+    "href": "/event/2658"
+  },
+  {
+    "place": "536",
+    "event": "BroncoCTF 2025",
+    "ctfPoints": "22.0000",
+    "ratingPoints": "0.085",
+    "href": "/event/2657"
+  },
+  {
+    "place": "236",
+    "event": "LA CTF 2025",
+    "ctfPoints": "2510.0000",
+    "ratingPoints": "5.485",
+    "href": "/event/2592"
+  },
+  {
+    "place": "136",
+    "event": "Nullcon Goa HackIM 2025 CTF",
+    "ctfPoints": "601.0000",
+    "ratingPoints": "4.860",
+    "href": "/event/2642"
+  },
+  {
+    "place": "79",
+    "event": "TUCTF 2024",
+    "ctfPoints": "905.0000",
+    "ratingPoints": "5.064",
+    "href": "/event/2584"
+  },
+  {
+    "place": "49",
+    "event": "Srdnlen CTF 2025",
+    "ctfPoints": "716.0000",
+    "ratingPoints": "5.473",
+    "href": "/event/2576"
+  },
+  {
+    "place": "861",
+    "event": "UofTCTF 2025",
+    "ctfPoints": "100.0000",
+    "ratingPoints": "0.215",
+    "href": "/event/2570"
+  },
+  {
+    "place": "25",
+    "event": "Wargames.MY CTF 2024",
+    "ctfPoints": "2730.0000",
+    "ratingPoints": "5.514",
+    "href": "/event/2597"
+  },
+  {
+    "place": "221",
+    "event": "0xL4ugh CTF",
+    "ctfPoints": "100.0000",
+    "ratingPoints": "0.443",
+    "href": "/event/2587"
+  },
+  {
+    "place": "278",
+    "event": "niteCTF 2024",
+    "ctfPoints": "60.0000",
+    "ratingPoints": "0.297",
+    "href": "/event/2461"
+  },
+  {
+    "place": "16",
+    "event": "Platypwn 2024",
+    "ctfPoints": "1584.0000",
+    "ratingPoints": "7.278",
+    "href": "/event/2407"
+  },
+  {
+    "place": "18",
+    "event": "World Wide CTF 2024",
+    "ctfPoints": "2983.0000",
+    "ratingPoints": "9.721",
+    "href": "/event/2572"
+  },
+  {
+    "place": "14",
+    "event": "BlockCTF 2024 (Formerly SquareCTF)",
+    "ctfPoints": "2276.0000",
+    "ratingPoints": "36.207",
+    "href": "/event/2517"
+  },
+  {
+    "place": "144",
+    "event": "HKCERT CTF 2024 (Qualifying Round)",
+    "ctfPoints": "910.0000",
+    "ratingPoints": "5.314",
+    "href": "/event/2455"
+  },
+  {
+    "place": "74",
+    "event": "Hackers N' Hops",
+    "ctfPoints": "375.0000",
+    "ratingPoints": "4.865",
+    "href": "/event/2550"
+  },
+  {
+    "place": "8",
+    "event": "Questcon CTF",
+    "ctfPoints": "2665.0000",
+    "ratingPoints": "25.256",
+    "href": "/event/2505"
+  },
+  {
+    "place": "4",
+    "event": "SunshineCTF 2024",
+    "ctfPoints": "7732.0000",
+    "ratingPoints": "45.870",
+    "href": "/event/2485"
+  },
+  {
+    "place": "150",
+    "event": "DEADFACE CTF 2024",
+    "ctfPoints": "2168.0000",
+    "ratingPoints": "7.025",
+    "href": "/event/2443"
+  },
+  {
+    "place": "10",
+    "event": "TCP1P CTF 2024: Exploring Nusantara's Digital Realm",
+    "ctfPoints": "3478.0000",
+    "ratingPoints": "10.400",
+    "href": "/event/2256"
+  },
+  {
+    "place": "62",
+    "event": "DefCamp Capture the Flag (D-CTF) 2024 Quals",
+    "ctfPoints": "751.0000",
+    "ratingPoints": "7.842",
+    "href": "/event/2480"
+  },
+  {
+    "place": "236",
+    "event": "H7CTF International",
+    "ctfPoints": "325.0000",
+    "ratingPoints": "1.165",
+    "href": "/event/2491"
+  },
+  {
+    "place": "6",
+    "event": "jailCTF 2024",
+    "ctfPoints": "12691.0000",
+    "ratingPoints": "17.015",
+    "href": "/event/2450"
+  },
+  {
+    "place": "127",
+    "event": "m0leCon CTF 2025 Teaser",
+    "ctfPoints": "100.0000",
+    "ratingPoints": "2.423",
+    "href": "/event/2440"
+  },
+  {
+    "place": "13",
+    "event": "Urmia CTF 2024",
+    "ctfPoints": "3600.0000",
+    "ratingPoints": "12.927",
+    "href": "/event/2460"
+  },
+  {
+    "place": "69",
+    "event": "BlackHat MEA CTF Qualification 2024",
+    "ctfPoints": "1640.0000",
+    "ratingPoints": "15.718",
+    "href": "/event/2430"
+  },
+  {
+    "place": "519",
+    "event": "CrewCTF 2024",
+    "ctfPoints": "50.0000",
+    "ratingPoints": "0.195",
+    "href": "/event/2223"
+  },
+  {
+    "place": "116",
+    "event": "TFC CTF 2024",
+    "ctfPoints": "660.0000",
+    "ratingPoints": "2.654",
+    "href": "/event/2423"
+  },
+  {
+    "place": "77",
+    "event": "corCTF 2024",
+    "ctfPoints": "577.0000",
+    "ratingPoints": "6.347",
+    "href": "/event/2282"
+  },
+  {
+    "place": "328",
+    "event": "DeadSec CTF 2024",
+    "ctfPoints": "200.0000",
+    "ratingPoints": "0.903",
+    "href": "/event/2353"
+  },
+  {
+    "place": "10",
+    "event": "ImaginaryCTF 2024",
+    "ctfPoints": "9208.0000",
+    "ratingPoints": "35.852",
+    "href": "/event/2396"
+  },
+  {
+    "place": "662",
+    "event": "OSCTF",
+    "ctfPoints": "100.0000",
+    "ratingPoints": "0.242",
+    "href": "/event/2416"
+  },
+  {
+    "place": "390",
+    "event": "DownUnderCTF 2024",
+    "ctfPoints": "1336.0000",
+    "ratingPoints": "7.869",
+    "href": "/event/2284"
+  },
+  {
+    "place": "43",
+    "event": "UIUCTF 2024",
+    "ctfPoints": "5717.0000",
+    "ratingPoints": "32.277",
+    "href": "/event/2275"
+  },
+  {
+    "place": "15",
+    "event": "Wani CTF 2024",
+    "ctfPoints": "4817.0000",
+    "ratingPoints": "19.732",
+    "href": "/event/2377"
+  },
+  {
+    "place": "119",
+    "event": "justCTF 2024 teaser",
+    "ctfPoints": "180.0000",
+    "ratingPoints": "3.539",
+    "href": "/event/2342"
+  },
+  {
+    "place": "9",
+    "event": "vsCTF 2024",
+    "ctfPoints": "6900.0000",
+    "ratingPoints": "24.590",
+    "href": "/event/2248"
+  },
+  {
+    "place": "94",
+    "event": "BCACTF 5.0",
+    "ctfPoints": "1835.0000",
+    "ratingPoints": "14.878",
+    "href": "/event/2274"
+  },
+  {
+    "place": "25",
+    "event": "Akasec CTF 2024",
+    "ctfPoints": "3095.0000",
+    "ratingPoints": "5.659",
+    "href": "/event/2222"
+  },
+  {
+    "place": "192",
+    "event": "Codegate CTF 2024 Preliminary",
+    "ctfPoints": "250.0000",
+    "ratingPoints": "1.635",
+    "href": "/event/2346"
+  },
+  {
+    "place": "37",
+    "event": "GPN CTF 2024",
+    "ctfPoints": "1294.0000",
+    "ratingPoints": "5.597",
+    "href": "/event/2257"
+  },
+  {
+    "place": "52",
+    "event": "NahamCon CTF 2024",
+    "ctfPoints": "7777.0000",
+    "ratingPoints": "16.456",
+    "href": "/event/2364"
+  },
+  {
+    "place": "34",
+    "event": "TJCTF 2024",
+    "ctfPoints": "2629.0000",
+    "ratingPoints": "11.085",
+    "href": "/event/2321"
+  },
+  {
+    "place": "23",
+    "event": "BYUCTF 2024",
+    "ctfPoints": "7969.0000",
+    "ratingPoints": "17.592",
+    "href": "/event/2252"
+  },
+  {
+    "place": "47",
+    "event": "San Diego CTF 2024",
+    "ctfPoints": "728.0000",
+    "ratingPoints": "4.881",
+    "href": "/event/2325"
+  },
+  {
+    "place": "5",
+    "event": "TBTL CTF 2024",
+    "ctfPoints": "3131.0000",
+    "ratingPoints": "20.566",
+    "href": "/event/2324"
+  },
+  {
+    "place": "12",
+    "event": "squ1rrel CTF 2024",
+    "ctfPoints": "5862.0000",
+    "ratingPoints": "14.283",
+    "href": "/event/2370"
+  },
+  {
+    "place": "6",
+    "event": "MireaCTF Quals 2024",
+    "ctfPoints": "13263.0000",
+    "ratingPoints": "18.247",
+    "href": "/event/2367"
+  },
+  {
+    "place": "171",
+    "event": "UMDCTF 2024",
+    "ctfPoints": "1094.0000",
+    "ratingPoints": "3.876",
+    "href": "/event/2323"
+  },
+  {
+    "place": "29",
+    "event": "cr3 CTF 2024",
+    "ctfPoints": "918.0000",
+    "ratingPoints": "2.224",
+    "href": "/event/2288"
+  },
+  {
+    "place": "18",
+    "event": "Grey Cat The Flag 2024 Qualifiers",
+    "ctfPoints": "5660.0000",
+    "ratingPoints": "10.125",
+    "href": "/event/2242"
+  },
+  {
+    "place": "22",
+    "event": "CTF@CIT 2024",
+    "ctfPoints": "8310.0000",
+    "ratingPoints": "9.505",
+    "href": "/event/2339"
+  },
+  {
+    "place": "10",
+    "event": "Incognito 5.0",
+    "ctfPoints": "3260.0000",
+    "ratingPoints": "21.746",
+    "href": "/event/2316"
+  },
+  {
+    "place": "13",
+    "event": "b01lers CTF 2024",
+    "ctfPoints": "7832.0000",
+    "ratingPoints": "16.907",
+    "href": "/event/2250"
+  },
+  {
+    "place": "2",
+    "event": "Space Heroes 2024",
+    "ctfPoints": "10521.0000",
+    "ratingPoints": "34.623",
+    "href": "/event/2254"
+  },
+  {
+    "place": "29",
+    "event": "ShunyaCTF Aarambha",
+    "ctfPoints": "1563.0000",
+    "ratingPoints": "9.037",
+    "href": "/event/2336"
+  },
+  {
+    "place": "5",
+    "event": "SwampCTF 2024",
+    "ctfPoints": "6041.0000",
+    "ratingPoints": "44.066",
+    "href": "/event/2138"
+  },
+  {
+    "place": "18",
+    "event": "RITSEC CTF 2024",
+    "ctfPoints": "2890.0000",
+    "ratingPoints": "10.336",
+    "href": "/event/2291"
+  },
+  {
+    "place": "25",
+    "event": "AmateursCTF 2024",
+    "ctfPoints": "5920.0000",
+    "ratingPoints": "11.284",
+    "href": "/event/2226"
+  },
+  {
+    "place": "4",
+    "event": "UNbreakable International 2024 - Team Phase",
+    "ctfPoints": "6944.0000",
+    "ratingPoints": "28.231",
+    "href": "/event/2297"
+  },
+  {
+    "place": "68",
+    "event": "CursedCTF 2024 Quals",
+    "ctfPoints": "3142.0000",
+    "ratingPoints": "3.501",
+    "href": "/event/2239"
+  },
+  {
+    "place": "188",
+    "event": "UTCTF 2024",
+    "ctfPoints": "3003.0000",
+    "ratingPoints": "7.283",
+    "href": "/event/2302"
+  },
+  {
+    "place": "16",
+    "event": "JerseyCTF IV",
+    "ctfPoints": "11128.0000",
+    "ratingPoints": "9.799",
+    "href": "/event/2230"
+  },
+  {
+    "place": "84",
+    "event": "LINE CTF 2024",
+    "ctfPoints": "311.0000",
+    "ratingPoints": "4.806",
+    "href": "/event/2119"
+  },
+  {
+    "place": "8",
+    "event": "WolvCTF 2024",
+    "ctfPoints": "9248.0000",
+    "ratingPoints": "26.335",
+    "href": "/event/2240"
+  },
+  {
+    "place": "4",
+    "event": "1753CTF 2024",
+    "ctfPoints": "5200.0000",
+    "ratingPoints": "25.538",
+    "href": "/event/2234"
+  },
+  {
+    "place": "3",
+    "event": "Nullcon Berlin HackIM 2024 CTF",
+    "ctfPoints": "6323.0000",
+    "ratingPoints": "21.881",
+    "href": "/event/2264"
+  },
+  {
+    "place": "58",
+    "event": "Cyber Apocalypse 2024: Hacker Royale",
+    "ctfPoints": "16200.0000",
+    "ratingPoints": "19.763",
+    "href": "/event/2255"
+  },
+  {
+    "place": "2",
+    "event": "Shakti CTF",
+    "ctfPoints": "5050.0000",
+    "ratingPoints": "34.799",
+    "href": "/event/2268"
+  },
+  {
+    "place": "11",
+    "event": "Pearl CTF",
+    "ctfPoints": "5809.0000",
+    "ratingPoints": "13.021",
+    "href": "/event/2231"
+  },
+  {
+    "place": "9",
+    "event": "GCC CTF 2024",
+    "ctfPoints": "7689.0000",
+    "ratingPoints": "15.636",
+    "href": "/event/2251"
+  },
+  {
+    "place": "96",
+    "event": "osu!gaming CTF 2024",
+    "ctfPoints": "2615.0000",
+    "ratingPoints": "7.307",
+    "href": "/event/2165"
+  },
+  {
+    "place": "133",
+    "event": "VishwaCTF 2024",
+    "ctfPoints": "2739.0000",
+    "ratingPoints": "6.531",
+    "href": "/event/2272"
+  },
+  {
+    "place": "37",
+    "event": "bi0sCTF 2024",
+    "ctfPoints": "2605.0000",
+    "ratingPoints": "16.420",
+    "href": "/event/2117"
+  },
+  {
+    "place": "18",
+    "event": "BraekerCTF",
+    "ctfPoints": "1196.0000",
+    "ratingPoints": "8.972",
+    "href": "/event/2181"
+  },
+  {
+    "place": "20",
+    "event": "BroncoCTF 2024",
+    "ctfPoints": "3295.0000",
+    "ratingPoints": "11.875",
+    "href": "/event/2261"
+  },
+  {
+    "place": "44",
+    "event": "LA CTF 2024",
+    "ctfPoints": "8126.0000",
+    "ratingPoints": "11.189",
+    "href": "/event/2102"
+  },
+  {
+    "place": "325",
+    "event": "BITSCTF 2024",
+    "ctfPoints": "120.0000",
+    "ratingPoints": "0.385",
+    "href": "/event/2235"
+  },
+  {
+    "place": "13",
+    "event": "Ugra CTF Quals 2024",
+    "ctfPoints": "2050.0000",
+    "ratingPoints": "15.590",
+    "href": "/event/2241"
+  },
+  {
+    "place": "47",
+    "event": "0xL4ugh CTF 2024",
+    "ctfPoints": "975.0000",
+    "ratingPoints": "3.329",
+    "href": "/event/2216"
+  },
+  {
+    "place": "219",
+    "event": "DiceCTF 2024 Quals",
+    "ctfPoints": "248.0000",
+    "ratingPoints": "2.579",
+    "href": "/event/2217"
+  },
+  {
+    "place": "110",
+    "event": "TetCTF 2024",
+    "ctfPoints": "200.0000",
+    "ratingPoints": "2.200",
+    "href": "/event/2212"
+  },
+  {
+    "place": "517",
+    "event": "Real World CTF 6th",
+    "ctfPoints": "32.0000",
+    "ratingPoints": "1.542",
+    "href": "/event/2172"
+  }
+]
