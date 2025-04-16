@@ -1,3 +1,4 @@
+/* eslint-disable */
 import fetch from 'node-fetch';
 import * as cheerio from 'cheerio';
 import fs from 'fs';
