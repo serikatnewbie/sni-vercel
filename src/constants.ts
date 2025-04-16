@@ -33,7 +33,7 @@ export const SOCIALS = [
     href: "https://ctftime.org/team/279998",
     linkTitle: `${SITE.title} on CTFTime`,
     icon: IconCTFTime,
-  }
+  },
 ] as const;
 
 export const SHARE_LINKS = [

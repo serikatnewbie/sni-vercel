@@ -10,7 +10,8 @@
     "astro": "astro",
     "format:check": "prettier --check .",
     "format": "prettier --write .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "scrape": "cd src/data/ctftime && npx tsx scrapeData.ts"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",

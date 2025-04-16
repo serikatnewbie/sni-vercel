@@ -26,47 +26,56 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
   <div class="container mx-auto max-w-3xl px-4">
     <main id="main-content" data-layout="index">
       <section id="hero" class="pt-8 pb-6">
-        <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-          SNI Cybersecurity Team
-        </h1>
-        <a
-          target="_blank"
-          href="/rss.xml"
-          class="inline-block"
-          aria-label="rss feed"
-          title="RSS Feed"
-        >
-          <IconRss
-            width={20}
-            height={20}
-            class="scale-125 stroke-accent stroke-3"
-          />
-          <span class="sr-only">RSS Feed</span>
-        </a>
+        <div class="flex items-center justify-center gap-8">
+          <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+            SNI Cybersecurity Team
+          </h1>
+          <a
+            target="_blank"
+            href="/rss.xml"
+            class="inline-block"
+            aria-label="rss feed"
+            title="RSS Feed"
+          >
+            <IconRss
+              width={20}
+              height={20}
+              class="scale-125 stroke-accent stroke-3"
+            />
+            <span class="sr-only">RSS Feed</span>
+          </a>
+        </div>
 
-        <p class="max-w-prose">
-          The SNI Cybersecurity Team is an Indonesian CTF team composed of highly motivated individuals
-          who actively participate in national and international cybersecurity competitions.
-          Our team members share a deep passion for cybersecurity and are dedicated to continually
+        <p class="w-full text-justify">
+          The SNI Cybersecurity Team is an Indonesian CTF team composed of
+          highly motivated individuals who actively participate in national and
+          international cybersecurity competitions. Our team members share a
+          deep passion for cybersecurity and are dedicated to continually
           advancing their expertise in this dynamic field.
         </p>
-        
-        <p class="max-w-prose mt-4">
-          In addition to competing, we provide specialized services to CTF event organizers, such as
-          challenge creation and infrastructure management, as well as CTF mentoring across various categories.
+
+        <p class="mt-4 w-full text-justify">
+          In addition to competing, we provide specialized services to CTF event
+          organizers, such as challenge creation and infrastructure management,
+          as well as CTF mentoring across various categories.
         </p>
-        
-        <div class="mt-6 mb-4 max-w-prose">
-          Furthermore, according to CTFtime, SNI achieved the following placements:
+
+        <div class="mt-6 mb-4 w-full text-justify">
+          Furthermore, according to CTFtime, SNI achieved the following
+          placements:
           <ul>
             {
-              placements.toReversed().map((placement) => (
-                <li class="flex items-start mt-1">
+              placements.toReversed().map(placement => (
+                <li class="mt-1 flex items-start">
                   <span>
-                    In {placement.year}, SNI is ranked&nbsp;
-                    <span class="font-bold text-emerald-600 dark:text-emerald-400">#{placement.place}</span>&nbsp;
-                    in the world and&nbsp;
-                    <span class="font-bold text-emerald-600 dark:text-emerald-400">#{placement.countryPlace}</span>&nbsp;
+                    In {placement.year}, SNI is ranked
+                    <span class="font-bold text-emerald-600 dark:text-emerald-400">
+                      #{placement.place}
+                    </span>
+                    in the world and
+                    <span class="font-bold text-emerald-600 dark:text-emerald-400">
+                      #{placement.countryPlace}
+                    </span>
                     in Indonesia.
                   </span>
                 </li>
@@ -74,7 +83,7 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
             }
           </ul>
         </div>
-        
+
         {
           // only display if at least one social link is enabled
           SOCIALS.length > 0 && (
@@ -117,9 +126,9 @@ const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
         )
       }
 
-      <div class="my-8 text-center">
-        <LinkButton href="/achievements/">
-          Achievements
+      <div class="mb-8 text-center">
+        <LinkButton href="/posts/">
+          All Posts
           <IconArrowRight class="inline-block" />
         </LinkButton>
       </div>

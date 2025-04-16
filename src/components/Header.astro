@@ -22,8 +22,8 @@ const isActive = (path: string) => {
   return currentPath === path || currentPathArray[0] === pathArray[0];
 };
 const pages = [
-  // "/posts",
   // "/tags",
+  "/posts",
   "/members",
   "/achievements",
   "/contests",
@@ -78,10 +78,7 @@ const pages = [
           {
             pages.map(page => (
               <li class="col-span-2">
-                <a
-                  href={page}
-                  class:list={{ "active-nav": isActive(page) }}
-                >
+                <a href={page} class:list={{ "active-nav": isActive(page) }}>
                   {page.replace("/", "") || "Home"}
                 </a>
               </li>
