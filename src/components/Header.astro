@@ -78,10 +78,7 @@ const pages = [
           {
             pages.map(page => (
               <li class="col-span-2">
-                <a
-                  href={page}
-                  class:list={{ "active-nav": isActive(page) }}
-                >
+                <a href={page} class:list={{ "active-nav": isActive(page) }}>
                   {page.replace("/", "") || "Home"}
                 </a>
               </li>

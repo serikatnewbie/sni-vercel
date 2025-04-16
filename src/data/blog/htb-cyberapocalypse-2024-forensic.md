@@ -7,8 +7,7 @@ featured: false
 draft: false
 tags:
   - write-up
-description:
-  HTB CyberApocalypse 2024 Forensics writeup by k.eii (9/10)
+description: HTB CyberApocalypse 2024 Forensics writeup by k.eii (9/10)
 ---
 
 # 1. It Has Begun (_very easy_)
@@ -635,4 +634,3 @@ public class Program
 ```
 
 Flag: `HTB{2_f34r_1s_4_ch01ce_322720914448bf9831435690c5835634}`
-

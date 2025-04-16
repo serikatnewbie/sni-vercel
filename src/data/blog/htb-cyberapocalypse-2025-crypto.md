@@ -7,10 +7,8 @@ featured: false
 draft: false
 tags:
   - write-up
-description:
-  HTB Cyber Apocalypse 2025 Cryptography writeup by azuketto
+description: HTB Cyber Apocalypse 2025 Cryptography writeup by azuketto
 ---
-
 
 # Cyber Apocalypse CTF 2025
 
@@ -19,7 +17,9 @@ I participated in this CTF with team [SNI](https://ctftime.org/team/279998/), an
 ## Table of contents
 
 ## Cry/Prelim
+
 This is a challenge regarding a decryption of a permutation group.
+
 ```python=
 from random import shuffle
 from hashlib import sha256
@@ -56,7 +56,7 @@ with open('tales.txt', 'w') as f:
     f.write(f'{enc_flag = }')
 ```
 
-As usual when dealing with unusual groups, we can just calculate the order of the group, and do decryption by getting the *power* of the element to be `1` modulo the order. In this case, we can calculate a multiple of the order easily, which is `n!`, as this takes into account all possible permutation cycle lengths of the members of the array.
+As usual when dealing with unusual groups, we can just calculate the order of the group, and do decryption by getting the _power_ of the element to be `1` modulo the order. In this case, we can calculate a multiple of the order easily, which is `n!`, as this takes into account all possible permutation cycle lengths of the members of the array.
 
 ```python=
 from hashlib import sha256
@@ -85,7 +85,7 @@ def decrypt_flag(original_message, enc_flag):
     return flag
 
 scrambled_message = []
-enc_flag = b'' 
+enc_flag = b''
 buf = open('tales.txt').read()
 exec(buf)
 e = 0x10001
@@ -105,16 +105,17 @@ print(decrypt_flag(original, enc_flag))
 ```
 
 ## Cry/Traces
+
 This is similar to a classical cipher challenge, where we must do some manual decryption. The only thing we need to realize in the challenge is that the encryption done for all messages are done with the same stream from the AES CTR.
 
 ```python=
 def encrypt(self, msg):
         encrypted_message = AES.new(self.key, AES.MODE_CTR, counter=Counter.new(128)).encrypt(msg)
         return encrypted_message
-    
+
 def join_channel(self, args):
         channel = args[1] if len(args) > 1 else None
-        
+
         if channel not in CHANNEL_NAMES:
             err(f':{self.host} 403 guest {channel} :No such channel')
             return
@@ -128,13 +129,13 @@ def join_channel(self, args):
         if (not key and requires_key) or (channel_key and key != channel_key):
             err(f':{self.host} 475 guest {channel} :Cannot join channel (+k) - bad key')
             return
-        
+
         for message in MESSAGES[channel]:
             timestamp = message['timestamp']
             sender = message['sender']
             print(f'{timestamp} <{sender}> : ', end='')
             self.output_message(message['body'])
-        
+
         while True:
             warn('You must set your channel nickname in your first message at any channel. Format: "!nick <nickname>"')
             inp = input('guest > ').split()
@@ -197,7 +198,9 @@ Known all: b'!leave'
 ```
 
 ## Cry/Copperbox
+
 This is a straightforward coppersmith challenge.
+
 ```python=
 import secrets
 
@@ -224,6 +227,7 @@ with open('output.txt', 'w') as o:
 ```
 
 We know `256-48` bits of `h1` and `h2`, and we have relations of the lcg on one variable `x`. We just find resultants on `x`, then do coppersmith on unknowns of `h1` and `h2`. After recovering `h1` and `h2`, we can do simple equation manipulation to recover the flag.
+
 ```python=
 p = 0x31337313373133731337313373133731337313373133731337313373133732ad
 
@@ -279,7 +283,9 @@ print(n2s(int(x)))
 ```
 
 ## Cry/Hourcle
+
 Another AES oracle that feels very similar to decryption oracle.
+
 ```python=
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
@@ -362,17 +368,17 @@ def oracle(uname: str):
     r.sendlineafter(b'::', uname.encode())
     res = r.recvafter(b':', bytes)
     return res
-    
+
 known = ''
 while len(known) < 16:
     for char in tqdm(charset):
         guess = known + char
         junk = '0' * (16 - len(guess))
-        
+
         data = '0' * 16 + junk + guess + junk
-        
+
         res = oracle(data)
-        
+
         data = data.encode()
         dec2 = xor(data[:16], res[16:32])
         dec3 = xor(data[16:32], res[32:48])
@@ -380,7 +386,7 @@ while len(known) < 16:
             known = guess
             print(f"Known = {known}")
             break
-            
+
 while len(known) < 20:
     f = False
     for char in tqdm(charset):
@@ -388,7 +394,7 @@ while len(known) < 20:
         guess = guess[-16:]
         junk = '0' * (31 - len(known))
         data = '0' * 16 + guess + junk
-        
+
         # datapw = data + k
         # print(data[:16], data[16:32], datapw[32:48], datapw[48:64], datapw[64:])
         # exit(0)
@@ -406,8 +412,8 @@ while len(known) < 20:
     if not f:
         print("Fail")
         break
-    
-    
+
+
 r.sendlineafter(b'::', b'2')
 r.sendlineafter(b'::', known.encode())
 r.interactive()
@@ -415,6 +421,7 @@ r.interactive()
 ```
 
 ## Cry/Twin Oracles
+
 Chall is centered around two LSB oracles, an RSA LSB oracle that is obsfucated by an LCG LSB oracle.
 
 ```python=
@@ -438,14 +445,14 @@ class ChaosRelic:
         self.x0 = getPrime(15)
         self.x = self.x0
         print(f"The Ancient Chaos Relic fuels the Seers' wisdom. Behold its power: M = {self.M}")
-        
+
     def next_state(self):
         self.x = pow(self.x, 2, self.M)
-        
+
     def get_bit(self):
         self.next_state()
         return self.extract_bit_from_state()
-    
+
     def extract_bit_from_state(self):
         return self.x % 2
 
@@ -456,7 +463,7 @@ class ObsidianSeers:
         self.p = getPrime(512)
         self.q = getPrime(512)
         self.n = self.p * self.q
-        self.e = 65537 
+        self.e = 65537
         self.phi = (self.p - 1) * (self.q - 1)
         self.d = pow(self.e, -1, self.phi)
 
@@ -468,18 +475,18 @@ class ObsidianSeers:
 
     def HighSeerVision(self, c):
         return int(self.sacred_decryption(c) > self.n//2)
-    
+
     def FateSeerWhisper(self, c):
         return self.sacred_decryption(c) % 2
-    
+
     def divine_prophecy(self, a_bit, c):
         return self.FateSeerWhisper(c) if a_bit == 0 else self.HighSeerVision(c)
-        
+
     def consult_seers(self, c):
         next_bit = self.relic.get_bit()
         response = self.divine_prophecy(next_bit, c)
         return response
-    
+
 
 
 def main():
@@ -525,9 +532,9 @@ possible_x = []
 for i in range(2 ** 14 + 1, 2 ** 15):
     if isPrime(i) and i.bit_length() == 15:
         possible_x.append(i)
-        
+
 # possible_x = [0]
-        
+
 #r = process(['python3', 'server.py'])#, level='debug')
 r = remote('83.136.249.227', 39892)
 M = r.recvafter(b'M =', int)
@@ -536,14 +543,14 @@ class RNG:
     def __init__(self, seed: int):
         self.M = M
         self.x = seed
-        
+
     def next_state(self):
         self.x = pow(self.x, 2, self.M)
-        
+
     def get_bit(self):
         self.next_state()
         return self.extract_bit_from_state()
-    
+
     def extract_bit_from_state(self):
         return self.x % 2
 
@@ -555,7 +562,7 @@ def transform():
         num = pow(x, 2, M)
         x_.append(num)
     possible_x = x_
-    
+
 def check(lsb: int):
     global possible_x
     x_ = set()
@@ -583,7 +590,7 @@ while len(possible_x) > 1:
     transform()
     check(res)
     print('x', len(possible_x))
-    
+
 x = possible_x[0]
 print(f'{x=}')
 rng = RNG(x)
@@ -609,7 +616,7 @@ while lower < upper:
     else: lower = mid + 1
     i += 1
     print(i, end='\r')
-    
+
 from libnum import n2s
 print(n2s(lower-1))
 
@@ -617,6 +624,7 @@ print(n2s(lower-1))
 ```
 
 ## Cry/Verilicious
+
 This chall is very straightforward, simple HNP.
 
 ```python=
@@ -678,7 +686,7 @@ for i in range(len(R)):
     l = [0] * len(R)
     l[i] = n
     M.append(l)
-    
+
 M = Matrix(ZZ, M)
 print("Matrix formed")
 lower = s2n(b'\x00\x02' + b'\x00' * 126)
@@ -698,7 +706,9 @@ print(n2s(int(flag1)))
 ```
 
 ## Cry/Kewiri
+
 THis is such a time consuming blackbox problem. There are basically six subproblems that we must solve:
+
 1. Given prime `p`, what is its bit length?
 2. Given group `GF(p)` find factorization of its order.
 3. Given elements of `GF(p)`, determine whether the element is a generator.
@@ -743,7 +753,7 @@ for _ in range(17):
     for c in list(fac):
         if pow(num, (p-1)//c[0], p) == 1:
             payload = 0
-        
+
     r.sendlineafter(b'>', str(payload))
 
 a = r.recvafter(b'a =', int)

@@ -55,6 +55,6 @@ html[data-theme="dark"] {
 }
 
 .active-nav {
-  @apply bg-accent/10 rounded-md text-accent;
-  @apply dark:bg-accent/20 dark:rounded-md dark:text-accent;
+  @apply rounded-md bg-accent/10 text-accent;
+  @apply dark:rounded-md dark:bg-accent/20 dark:text-accent;
 }

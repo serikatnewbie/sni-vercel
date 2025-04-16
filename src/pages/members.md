@@ -2,6 +2,7 @@
 layout: ../layouts/AboutLayout.astro
 title: "Members"
 ---
+
 ### Active Members
 
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
