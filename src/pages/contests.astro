@@ -4,8 +4,12 @@ import Main from "@/layouts/Main.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import contests from "@/data/ctftime/ctf_events.json" assert { type: "json" };
----
 
+// Filter contests where place is 1-4
+const filteredContests = contests.filter(contest => 
+  ["1", "2", "3", "4"].includes(contest.place)
+);
+---
 <Layout>
   <Header />
   <Main
@@ -25,7 +29,7 @@ import contests from "@/data/ctftime/ctf_events.json" assert { type: "json" };
         </thead>
         <tbody>
           {
-            contests.map((contest, index) => (
+            filteredContests.map((contest, index) => (
               <tr
                 class={`${
                   index % 2 === 0
@@ -42,6 +46,7 @@ import contests from "@/data/ctftime/ctf_events.json" assert { type: "json" };
                       {contest.place === "1" && "👑 "}
                       {contest.place === "2" && "🥈 "}
                       {contest.place === "3" && "🥉 "}
+                      {contest.place === "4" && "🏅 "}
                     </div>
                     <div class="text-sm font-medium text-gray-900 dark:text-white">
                       {contest.place}
@@ -49,7 +54,7 @@ import contests from "@/data/ctftime/ctf_events.json" assert { type: "json" };
                   </div>
                 </th>
                 <td class="px-6 py-4">
-                  <a
+                  
                     target="_blank"
                     href={"https://ctftime.org/" + contest.href}
                   >
@@ -71,6 +76,5 @@ import contests from "@/data/ctftime/ctf_events.json" assert { type: "json" };
       </table>
     </div>
   </Main>
-
   <Footer />
 </Layout>
