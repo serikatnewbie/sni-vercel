@@ -22,10 +22,8 @@ interface Contest {
   year:         number; // Extracted year
 }
 
-// Parse raw JSON
 const rawList = rawContests as RawContest[];
 const contests: Contest[] = rawList.map((c) => {
-  // Extract year from event name if possible (assuming format like "Event Name 2024")
   const yearMatch = c.event.match(/\b(20\d{2})\b/);
   const year = yearMatch ? parseInt(yearMatch[1]) : 0;
   
@@ -39,7 +37,6 @@ const contests: Contest[] = rawList.map((c) => {
   };
 });
 
-// Sort by most recent year first
 contests.sort((a, b) => {
   // Sort by year in descending order (most recent first)
   return (b.year || 0) - (a.year || 0);
@@ -132,14 +129,20 @@ function getMedalEmoji(place: string): string {
     <script>
       const btn = document.getElementById('toggle-show');
       const extraRows = document.querySelectorAll('tr.extra');
-      let showingAll = false;
+      let showingAll = false; // Start with not showing all (only top 10)
+      
       if (btn) {
         btn.addEventListener('click', () => {
+          // Toggle the state first
+          showingAll = !showingAll;
+          
+          // Then apply the changes based on the new state
           extraRows.forEach((row) => {
             row.classList.toggle('hidden', !showingAll);
           });
-          showingAll = !showingAll;
-          btn.textContent = showingAll ? 'Show All' : 'Show Top 10 Placements';
+          
+          // Update button text
+          btn.textContent = showingAll ? 'Show Top 10 Placements' : 'Show All';
         });
       }
     </script>
