@@ -11,7 +11,6 @@ interface RawContest {
   href:         string;
   ratingPoints: string;
   ctfPoints:    string;
-  date?:        string; // Optional date field if it exists in the data
 }
 
 interface Contest {
@@ -20,8 +19,7 @@ interface Contest {
   href:         string;
   ratingPoints: number;
   ctfPoints:    string;
-  date?:        Date;   // Parsed date object
-  year?:        number; // Extracted year
+  year:         number; // Extracted year
 }
 
 // Parse raw JSON
@@ -68,23 +66,13 @@ function getMedalEmoji(place: string): string {
     pageTitle="Contests"
     pageDesc="CTF events and rating points of SNI based on CTFtime.org (sorted by most recent)"
   >
-    <div class="mb-4 flex justify-between items-center">
-      <div>
-        <button
-          id="toggle-sort"
-          class="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition mr-2"
-        >
-          Sort by: Recent
-        </button>
-      </div>
-      <div>
-        <button
-          id="toggle-show"
-          class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
-        >
-          Show All
-        </button>
-      </div>
+    <div class="mb-4 text-right">
+      <button
+        id="toggle-show"
+        class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+      >
+        Show All
+      </button>
     </div>
 
     <div id="contests-table" class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -96,7 +84,7 @@ function getMedalEmoji(place: string): string {
             <th class="px-6 py-3">Points</th>
           </tr>
         </thead>
-        <tbody id="contests-body">
+        <tbody>
           {contests.map((contest, i) => (
             <tr
               class={
@@ -110,8 +98,6 @@ function getMedalEmoji(place: string): string {
                   .filter(Boolean)
                   .join(" ")
               }
-              data-year={contest.year || "Unknown"}
-              data-place={contest.place}
             >
               <th
                 scope="row"
@@ -148,76 +134,16 @@ function getMedalEmoji(place: string): string {
     </div>
 
     <script>
-      // Toggle show/hide functionality
-      const showBtn = document.getElementById('toggle-show');
+      const btn = document.getElementById('toggle-show');
       const extraRows = document.querySelectorAll('tr.extra');
       let showingAll = false;
-      
-      if (showBtn) {
-        showBtn.addEventListener('click', () => {
+      if (btn) {
+        btn.addEventListener('click', () => {
           extraRows.forEach((row) => {
             row.classList.toggle('hidden', !showingAll);
           });
           showingAll = !showingAll;
-          showBtn.textContent = showingAll ? 'Show Top 10' : 'Show All';
-        });
-      }
-
-      // Toggle sort functionality
-      const sortBtn = document.getElementById('toggle-sort');
-      let sortByRecent = true; // Start with sorting by recency
-      
-      if (sortBtn) {
-        sortBtn.addEventListener('click', () => {
-          sortByRecent = !sortByRecent;
-          sortContests();
-          sortBtn.textContent = sortByRecent ? 'Sort by: Recent' : 'Sort by: Placement';
-        });
-      }
-
-      function sortContests() {
-        const tbody = document.getElementById('contests-body');
-        if (!tbody) return;
-        
-        const rows = Array.from(tbody.querySelectorAll('tr'));
-        
-        rows.sort((a, b) => {
-          if (sortByRecent) {
-            // Sort by year (recent first), then by placement
-            const yearA = parseInt(a.dataset.year || '0', 10);
-            const yearB = parseInt(b.dataset.year || '0', 10);
-            
-            if (yearB !== yearA) {
-              return yearB - yearA;
-            }
-          }
-          
-          // Sort by placement as fallback or if sorting by placement
-          return parseInt(a.dataset.place || '999', 10) - parseInt(b.dataset.place || '999', 10);
-        });
-        
-        // Reapply alternating row colors and visibility classes
-        rows.forEach((row, i) => {
-          // Remove existing bg classes
-          row.classList.remove('bg-white', 'bg-gray-50', 'dark:bg-gray-800', 'dark:bg-gray-900');
-          
-          // Add appropriate bg class based on position
-          if (i % 2 === 0) {
-            row.classList.add('bg-white', 'dark:bg-gray-800');
-          } else {
-            row.classList.add('bg-gray-50', 'dark:bg-gray-900');
-          }
-          
-          // Handle visibility
-          row.classList.remove('extra', 'hidden');
-          if (!showingAll && i >= 10) {
-            row.classList.add('extra', 'hidden');
-          } else if (i >= 10) {
-            row.classList.add('extra');
-          }
-          
-          // Append to tbody
-          tbody.appendChild(row);
+          btn.textContent = showingAll ? 'Show Top 10' : 'Show All';
         });
       }
     </script>
