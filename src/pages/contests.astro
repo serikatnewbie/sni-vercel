@@ -11,7 +11,7 @@ interface RawContest {
   href:         string;
   ratingPoints: string;
   ctfPoints:    string;
-  date:         string;           
+  date?:        string; // Optional date field if it exists in the data
 }
 
 interface Contest {
@@ -20,20 +20,36 @@ interface Contest {
   href:         string;
   ratingPoints: number;
   ctfPoints:    string;
-  date:         Date;
+  date?:        Date;   // Parsed date object
+  year?:        number; // Extracted year
 }
 
+// Parse raw JSON
 const rawList = rawContests as RawContest[];
-const contests: Contest[] = rawList.map((c) => ({
-  place:        c.place,
-  event:        c.event,
-  href:         c.href,
-  ratingPoints: Number(c.ratingPoints),
-  ctfPoints:    c.ctfPoints,
-  date:         new Date(c.date),
-}));
+const contests: Contest[] = rawList.map((c) => {
+  // Extract year from event name if possible (assuming format like "Event Name 2024")
+  const yearMatch = c.event.match(/\b(20\d{2})\b/);
+  const year = yearMatch ? parseInt(yearMatch[1]) : 0;
+  
+  return {
+    place:        c.place,
+    event:        c.event,
+    href:         c.href,
+    ratingPoints: Number(c.ratingPoints),
+    ctfPoints:    c.ctfPoints,
+    year:         year,
+  };
+});
 
-contests.sort((a, b) => b.date.getTime() - a.date.getTime());
+// Sort by most recent year, then by place for same-year contests
+contests.sort((a, b) => {
+  // First sort by year in descending order (most recent first)
+  if (b.year !== a.year) {
+    return (b.year || 0) - (a.year || 0);
+  }
+  // For same year, sort by place (ascending)
+  return parseInt(a.place, 10) - parseInt(b.place, 10);
+});
 
 function getMedalEmoji(place: string): string {
   switch (place) {
@@ -50,28 +66,37 @@ function getMedalEmoji(place: string): string {
   <Header />
   <Main
     pageTitle="Contests"
-    pageDesc="CTF events and rating points of SNI based on CTFtime.org"
+    pageDesc="CTF events and rating points of SNI based on CTFtime.org (sorted by most recent)"
   >
-    <div class="mb-4 text-right">
-      <button
-        id="toggle-show"
-        class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
-      >
-        Show All
-      </button>
+    <div class="mb-4 flex justify-between items-center">
+      <div>
+        <button
+          id="toggle-sort"
+          class="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700 transition mr-2"
+        >
+          Sort by: Recent
+        </button>
+      </div>
+      <div>
+        <button
+          id="toggle-show"
+          class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+        >
+          Show All
+        </button>
+      </div>
     </div>
 
     <div id="contests-table" class="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table class="w-full text-left text-sm text-gray-800 dark:text-gray-300">
         <thead class="sticky top-0 z-10 bg-indigo-600 text-xs text-white uppercase">
           <tr>
-            <th class="px-6 py-3">Date</th>
             <th class="px-6 py-3">Place</th>
             <th class="px-6 py-3">Event</th>
             <th class="px-6 py-3">Points</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id="contests-body">
           {contests.map((contest, i) => (
             <tr
               class={
@@ -85,14 +110,16 @@ function getMedalEmoji(place: string): string {
                   .filter(Boolean)
                   .join(" ")
               }
+              data-year={contest.year || "Unknown"}
+              data-place={contest.place}
             >
-              <td class="px-6 py-4 whitespace-nowrap">
-                {contest.date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
-              </td>
-              <th scope="row" class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
+              <th
+                scope="row"
+                class="px-4 py-4 font-semibold whitespace-nowrap text-gray-900 dark:text-white"
+              >
                 <div class="flex items-center">
                   <div class="w-6">{getMedalEmoji(contest.place)}</div>
-                  <span class="ml-2 text-sm font-medium">{contest.place}</span>
+                  <div class="ml-2 text-sm font-medium">{contest.place}</div>
                 </div>
               </th>
               <td class="px-6 py-4">
@@ -103,6 +130,7 @@ function getMedalEmoji(place: string): string {
                   class="hover:underline"
                 >
                   {contest.event}
+                  {contest.year ? <span class="text-xs ml-2 text-gray-500">({contest.year})</span> : ""}
                 </a>
               </td>
               <td class="px-6 py-4">
@@ -120,16 +148,76 @@ function getMedalEmoji(place: string): string {
     </div>
 
     <script>
-      const btn = document.getElementById('toggle-show');
+      // Toggle show/hide functionality
+      const showBtn = document.getElementById('toggle-show');
       const extraRows = document.querySelectorAll('tr.extra');
       let showingAll = false;
-      if (btn) {
-        btn.addEventListener('click', () => {
+      
+      if (showBtn) {
+        showBtn.addEventListener('click', () => {
           extraRows.forEach((row) => {
             row.classList.toggle('hidden', !showingAll);
           });
           showingAll = !showingAll;
-          btn.textContent = showingAll ? 'Show Top 10' : 'Show All';
+          showBtn.textContent = showingAll ? 'Show Top 10' : 'Show All';
+        });
+      }
+
+      // Toggle sort functionality
+      const sortBtn = document.getElementById('toggle-sort');
+      let sortByRecent = true; // Start with sorting by recency
+      
+      if (sortBtn) {
+        sortBtn.addEventListener('click', () => {
+          sortByRecent = !sortByRecent;
+          sortContests();
+          sortBtn.textContent = sortByRecent ? 'Sort by: Recent' : 'Sort by: Placement';
+        });
+      }
+
+      function sortContests() {
+        const tbody = document.getElementById('contests-body');
+        if (!tbody) return;
+        
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        
+        rows.sort((a, b) => {
+          if (sortByRecent) {
+            // Sort by year (recent first), then by placement
+            const yearA = parseInt(a.dataset.year || '0', 10);
+            const yearB = parseInt(b.dataset.year || '0', 10);
+            
+            if (yearB !== yearA) {
+              return yearB - yearA;
+            }
+          }
+          
+          // Sort by placement as fallback or if sorting by placement
+          return parseInt(a.dataset.place || '999', 10) - parseInt(b.dataset.place || '999', 10);
+        });
+        
+        // Reapply alternating row colors and visibility classes
+        rows.forEach((row, i) => {
+          // Remove existing bg classes
+          row.classList.remove('bg-white', 'bg-gray-50', 'dark:bg-gray-800', 'dark:bg-gray-900');
+          
+          // Add appropriate bg class based on position
+          if (i % 2 === 0) {
+            row.classList.add('bg-white', 'dark:bg-gray-800');
+          } else {
+            row.classList.add('bg-gray-50', 'dark:bg-gray-900');
+          }
+          
+          // Handle visibility
+          row.classList.remove('extra', 'hidden');
+          if (!showingAll && i >= 10) {
+            row.classList.add('extra', 'hidden');
+          } else if (i >= 10) {
+            row.classList.add('extra');
+          }
+          
+          // Append to tbody
+          tbody.appendChild(row);
         });
       }
     </script>
