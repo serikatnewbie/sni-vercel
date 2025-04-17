@@ -4,7 +4,6 @@ import Main from "@/layouts/Main.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import contests from "@/data/ctftime/ctf_events.json" assert { type: "json" };
-
 // Filter contests where place is 1-4
 const filteredContests = contests.filter(contest => 
   ["1", "2", "3", "4"].includes(contest.place)
