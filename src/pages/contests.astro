@@ -21,6 +21,7 @@ interface Contest {
   ctfPoints:    string;
 }
 
+// Parse raw JSON
 const rawList = rawContests as RawContest[];
 const contests: Contest[] = rawList.map((c) => ({
   place:        c.place,
@@ -29,6 +30,8 @@ const contests: Contest[] = rawList.map((c) => ({
   ratingPoints: Number(c.ratingPoints),
   ctfPoints:    c.ctfPoints,
 }));
+
+contests.sort((a, b) => parseInt(a.place, 10) - parseInt(b.place, 10));
 
 function getMedalEmoji(place: string): string {
   switch (place) {
@@ -69,13 +72,16 @@ function getMedalEmoji(place: string): string {
           {contests.map((contest, i) => (
             <tr
               class={
-                (i % 2 === 0
-                  ? "bg-white dark:bg-gray-800"
-                  : "bg-gray-50 dark:bg-gray-900") +
-                " border-b transition hover:bg-emerald-50 dark:border-gray-700 dark:hover:bg-gray-700" +
-                (i >= 10 ? " extra" : "")
+                [
+                  i % 2 === 0
+                    ? "bg-white dark:bg-gray-800"
+                    : "bg-gray-50 dark:bg-gray-900",
+                  "border-b transition hover:bg-emerald-50 dark:border-gray-700 dark:hover:bg-gray-700",
+                  i >= 10 ? "extra hidden" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")
               }
-              style={i >= 10 ? "display: none;" : undefined}
             >
               <th
                 scope="row"
@@ -110,19 +116,19 @@ function getMedalEmoji(place: string): string {
       </table>
     </div>
 
-    <script type="module">
-      window.addEventListener('DOMContentLoaded', () => {
-        const btn = document.getElementById('toggle-show');
-        const extraRows = document.querySelectorAll<HTMLTableRowElement>('tr.extra');
-        let showingAll = false;
-        btn?.addEventListener('click', () => {
-          showingAll = !showingAll;
+    <script>
+      const btn = document.getElementById('toggle-show');
+      const extraRows = document.querySelectorAll('tr.extra');
+      let showingAll = false;
+      if (btn) {
+        btn.addEventListener('click', () => {
           extraRows.forEach((row) => {
-            row.style.display = showingAll ? '' : 'none';
+            row.classList.toggle('hidden', !showingAll);
           });
+          showingAll = !showingAll;
           btn.textContent = showingAll ? 'Show Top 10' : 'Show All';
         });
-      });
+      }
     </script>
   </Main>
   <Footer />
