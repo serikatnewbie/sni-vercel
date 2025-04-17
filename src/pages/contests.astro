@@ -30,12 +30,6 @@ const contests: Contest[] = rawList.map((c) => ({
   ctfPoints:    c.ctfPoints,
 }));
 
-const top10Contests = contests.filter((c) => {
-  const p = parseInt(c.place, 10);
-  return p >= 1 && p <= 10;
-});
-const showAll = false;
-
 function getMedalEmoji(place: string): string {
   switch (place) {
     case "1": return "👑";
@@ -114,7 +108,7 @@ function getMedalEmoji(place: string): string {
       </table>
     </div>
     <script>
-      const btn = document.getElementById("toggle-show");
+      const btn = document.getElementById("toggle-show")!;
       const rows = Array.from(document.querySelectorAll("tr.extra"));
       let showingAll = false;
       btn.addEventListener("click", () => {
