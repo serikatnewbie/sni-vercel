@@ -11,6 +11,7 @@ interface RawContest {
   href:         string;
   ratingPoints: string;
   ctfPoints:    string;
+  date:         string;           
 }
 
 interface Contest {
@@ -19,9 +20,9 @@ interface Contest {
   href:         string;
   ratingPoints: number;
   ctfPoints:    string;
+  date:         Date;
 }
 
-// Parse raw JSON
 const rawList = rawContests as RawContest[];
 const contests: Contest[] = rawList.map((c) => ({
   place:        c.place,
@@ -29,9 +30,10 @@ const contests: Contest[] = rawList.map((c) => ({
   href:         c.href,
   ratingPoints: Number(c.ratingPoints),
   ctfPoints:    c.ctfPoints,
+  date:         new Date(c.date),
 }));
 
-contests.sort((a, b) => parseInt(a.place, 10) - parseInt(b.place, 10));
+contests.sort((a, b) => b.date.getTime() - a.date.getTime());
 
 function getMedalEmoji(place: string): string {
   switch (place) {
@@ -63,6 +65,7 @@ function getMedalEmoji(place: string): string {
       <table class="w-full text-left text-sm text-gray-800 dark:text-gray-300">
         <thead class="sticky top-0 z-10 bg-indigo-600 text-xs text-white uppercase">
           <tr>
+            <th class="px-6 py-3">Date</th>
             <th class="px-6 py-3">Place</th>
             <th class="px-6 py-3">Event</th>
             <th class="px-6 py-3">Points</th>
@@ -83,13 +86,13 @@ function getMedalEmoji(place: string): string {
                   .join(" ")
               }
             >
-              <th
-                scope="row"
-                class="px-4 py-4 font-semibold whitespace-nowrap text-gray-900 dark:text-white"
-              >
+              <td class="px-6 py-4 whitespace-nowrap">
+                {contest.date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
+              </td>
+              <th scope="row" class="px-6 py-4 font-semibold text-gray-900 dark:text-white">
                 <div class="flex items-center">
                   <div class="w-6">{getMedalEmoji(contest.place)}</div>
-                  <div class="ml-2 text-sm font-medium">{contest.place}</div>
+                  <span class="ml-2 text-sm font-medium">{contest.place}</span>
                 </div>
               </th>
               <td class="px-6 py-4">
