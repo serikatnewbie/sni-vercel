@@ -30,10 +30,11 @@ const contests: Contest[] = rawList.map((c) => ({
   ctfPoints:    c.ctfPoints,
 }));
 
-const filteredContests = contests.filter((c) => {
+const top10Contests = contests.filter((c) => {
   const p = parseInt(c.place, 10);
   return p >= 1 && p <= 10;
 });
+const showAll = false;
 
 function getMedalEmoji(place: string): string {
   switch (place) {
@@ -52,7 +53,15 @@ function getMedalEmoji(place: string): string {
     pageTitle="Contests"
     pageDesc="CTF events and rating points of SNI based on CTFtime.org"
   >
-    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="mb-4 text-right">
+      <button
+        id="toggle-show"
+        class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition"
+      >
+        Show All
+      </button>
+    </div>
+    <div id="contests-table" class="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table class="w-full text-left text-sm text-gray-800 dark:text-gray-300">
         <thead class="sticky top-0 z-10 bg-indigo-600 text-xs text-white uppercase">
           <tr>
@@ -62,13 +71,15 @@ function getMedalEmoji(place: string): string {
           </tr>
         </thead>
         <tbody>
-          {filteredContests.map((contest, i) => (
+          {contests.map((contest, i) => (
             <tr
-              class={
+              class={[
                 i % 2 === 0
-                  ? "bg-white dark:bg-gray-800 border-b transition hover:bg-emerald-50 dark:border-gray-700 dark:hover:bg-gray-700"
-                  : "bg-gray-50 dark:bg-gray-900 border-b transition hover:bg-emerald-50 dark:border-gray-700 dark:hover:bg-gray-700"
-              }
+                  ? "bg-white dark:bg-gray-800"
+                  : "bg-gray-50 dark:bg-gray-900",
+                "border-b transition hover:bg-emerald-50 dark:border-gray-700 dark:hover:bg-gray-700",
+                i >= 10 ? "extra hidden" : "",
+              ].filter(Boolean).join(" ")}
             >
               <th
                 scope="row"
@@ -102,6 +113,18 @@ function getMedalEmoji(place: string): string {
         </tbody>
       </table>
     </div>
+    <script>
+      const btn = document.getElementById("toggle-show");
+      const rows = Array.from(document.querySelectorAll("tr.extra"));
+      let showingAll = false;
+      btn.addEventListener("click", () => {
+        showingAll = !showingAll;
+        rows.forEach((row) => {
+          row.classList.toggle("hidden", !showingAll);
+        });
+        btn.textContent = showingAll ? "Show Top 10" : "Show All";
+      });
+    </script>
   </Main>
   <Footer />
 </Layout>
