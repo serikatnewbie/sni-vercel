@@ -39,14 +39,10 @@ const contests: Contest[] = rawList.map((c) => {
   };
 });
 
-// Sort by most recent year, then by place for same-year contests
+// Sort by most recent year first
 contests.sort((a, b) => {
-  // First sort by year in descending order (most recent first)
-  if (b.year !== a.year) {
-    return (b.year || 0) - (a.year || 0);
-  }
-  // For same year, sort by place (ascending)
-  return parseInt(a.place, 10) - parseInt(b.place, 10);
+  // Sort by year in descending order (most recent first)
+  return (b.year || 0) - (a.year || 0);
 });
 
 function getMedalEmoji(place: string): string {
@@ -93,7 +89,7 @@ function getMedalEmoji(place: string): string {
                     ? "bg-white dark:bg-gray-800"
                     : "bg-gray-50 dark:bg-gray-900",
                   "border-b transition hover:bg-emerald-50 dark:border-gray-700 dark:hover:bg-gray-700",
-                  i >= 10 ? "extra hidden" : "",
+                  parseInt(contest.place, 10) > 10 ? "extra hidden" : "",
                 ]
                   .filter(Boolean)
                   .join(" ")
@@ -143,7 +139,7 @@ function getMedalEmoji(place: string): string {
             row.classList.toggle('hidden', !showingAll);
           });
           showingAll = !showingAll;
-          btn.textContent = showingAll ? 'Show Top 10' : 'Show All';
+          btn.textContent = showingAll ? 'Show All' : 'Show Top 10 Placements';
         });
       }
     </script>
