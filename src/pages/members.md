@@ -21,19 +21,22 @@ title: "Members"
       </p>
     </div>
   </div>
-
   <!-- Member 2 -->
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
     <img src="/avatars/itoid.jpg" alt="itoid" class="w-16 h-16 rounded-full">
     <div>
       <h3 class="font-bold">itoid</h3>
-      <p class="text-sm">pwn enthusiast</p>
+      <p class="text-sm">Founder of SNI</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-red-200 text-red-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
       </div>
+      <p class="text-xs text-gray-600 mt-1">
+        🌐 <a href="https://hackmd.io/@itoid" target="_blank" class="text-blue-600 hover:underline">Blog</a>
+      </p>
     </div>
   </div>
+</div>
 
   <!-- Member 3 -->
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
