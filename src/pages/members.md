@@ -29,7 +29,7 @@ title: "Members"
       <h3 class="font-bold">itoid</h3>
       <p class="text-sm">Founder of SNI</p>
       <div class="flex flex-wrap gap-1 mt-1">
-        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
+        <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
       </div>
       <p class="text-xs text-gray-600 mt-1">
@@ -45,7 +45,7 @@ title: "Members"
       <h3 class="font-bold">msfir</h3>
       <p class="text-sm">25k++ professional yapper</p>
       <div class="flex flex-wrap gap-1 mt-1">
-        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
+        <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
       </div>
     </div>
@@ -120,7 +120,7 @@ title: "Members"
       <h3 class="font-bold">daptheHuman</h3>
       <p class="text-sm">didnt receive the registration confirmation email</p>
       <div class="flex flex-wrap gap-1 mt-1">
-        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
+        <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
         <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">misc</span>
       </div>
@@ -155,7 +155,7 @@ title: "Members"
   </div>
 
   <!-- Member 12 -->
-  <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
+  <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">    
     <img src="/avatars/rep.webp" alt="replicant" class="w-16 h-16 rounded-full" />
     <div>
       <h3 class="font-bold">replicant</h3>
@@ -187,7 +187,7 @@ title: "Members"
       <h3 class="font-bold">rui</h3>
       <p class="text-sm">waiting for domestic na kanojo season 2</p>
       <div class="flex flex-wrap gap-1 mt-1">
-        <span class="bg-indigo-200 text-indigo-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
+        <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
       </div>
     </div>
   </div>
