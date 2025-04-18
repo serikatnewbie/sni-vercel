@@ -172,7 +172,7 @@ title: "Members"
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
     <img src="/avatars/um.png" alt="um" class="w-16 h-16 rounded-full" />
     <div>
-      <h3 class="font-bold">replicant</h3>
+      <h3 class="font-bold">um</h3>
       <p class="text-sm">sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-pink-200 text-pink-800 text-xs font-semibold px-2 py-0.5 rounded">web</span>
