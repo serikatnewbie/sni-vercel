@@ -149,7 +149,7 @@ title: "Members"
       <h3 class="font-bold">frennn</h3>
       <p class="text-sm">actively tracking ur track</p>
       <div class="flex flex-wrap gap-1 mt-1">
-        <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">foren</span>
+        <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">for</span>
       </div>
     </div>
   </div>
@@ -162,8 +162,20 @@ title: "Members"
       <p class="text-sm">If my code has a bug, it’s not in my code. it’s in Intel’s architecture</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-pink-200 text-pink-800 text-xs font-semibold px-2 py-0.5 rounded">web</span>
-        <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">foren</span>
+        <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">for</span>
         <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">misc</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Member 13 -->
+  <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
+    <img src="/avatars/um.png" alt="um" class="w-16 h-16 rounded-full" />
+    <div>
+      <h3 class="font-bold">replicant</h3>
+      <p class="text-sm">sebaik-baik manusia adalah yang paling bermanfaat bagi orang lain</p>
+      <div class="flex flex-wrap gap-1 mt-1">
+        <span class="bg-pink-200 text-pink-800 text-xs font-semibold px-2 py-0.5 rounded">web</span>
       </div>
     </div>
   </div>
