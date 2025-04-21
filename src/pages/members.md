@@ -106,7 +106,7 @@ title: "Members"
     <img src="https://serikatnewbie.github.io/static/images/avatar/player4.webp" alt="Bengsky" class="w-16 h-16 rounded-full" />
     <div>
       <h3 class="font-bold">Bengsky</h3>
-      <p class="text-sm">only 22, but already have joint pain</p>
+      <p class="text-sm">want to get married but don't have a candidate yet</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-pink-200 text-pink-800 text-xs font-semibold px-2 py-0.5 rounded">web</span>
       </div>
@@ -180,14 +180,25 @@ title: "Members"
     </div>
   </div>
 
-  <!-- Member 14 -->
+  <!-- Member 15 -->
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
-    <img src="/avatars/rui.png" alt="rui" class="w-16 h-16 rounded-full" />
+    <img src="/avatars/roxazs.png" alt="roxazs" class="w-16 h-16 rounded-full" />
     <div>
-      <h3 class="font-bold">rui</h3>
-      <p class="text-sm">waiting for domestic na kanojo season 2</p>
+      <h3 class="font-bold">roxazs</h3>
+      <p class="text-sm">Is that what I'm supposed to be?</p>
       <div class="flex flex-wrap gap-1 mt-1">
-        <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
+        <span class="bg-lime-200 text-lime-800 text-xs font-semibold px-2 py-0.5 rounded">android</span>
+      </div>
+    </div>
+  </div>
+  <!-- Member 16 -->
+  <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
+    <img src="/avatars/wazeazure" alt="wazeazure" class="w-16 h-16 rounded-full" />
+    <div>
+      <h3 class="font-bold">wazeazure</h3>
+      <p class="text-sm">pengen jago kek bengsky orz</p>
+      <div class="flex flex-wrap gap-1 mt-1">
+        <span class="bg-pink-200 text-pink-800 text-xs font-semibold px-2 py-0.5 rounded">web</span>
       </div>
     </div>
   </div>
