@@ -25,6 +25,7 @@ title: "Achievements"
 | 🏅 1753CTF 2024                              |
 | 9th Place - HackTheBox Cyber Apocalypse 2025 |
 | Finalist - CDDC Brainhack 2024               |
+| 🥉 UMassCTF 2025           				   |
 
 ## 🇮🇩 National Events
 
