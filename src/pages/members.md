@@ -193,7 +193,7 @@ title: "Members"
   </div>
   <!-- Member 16 -->
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
-    <img src="/avatars/wazeazure" alt="wazeazure" class="w-16 h-16 rounded-full" />
+    <img src="/avatars/wazeazure.png" alt="wazeazure" class="w-16 h-16 rounded-full" />
     <div>
       <h3 class="font-bold">wazeazure</h3>
       <p class="text-sm">pengen jago kek bengsky orz</p>
