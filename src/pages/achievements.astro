@@ -1,8 +1,5 @@
 ---
-import Layout from "@/layouts/Layout.astro";
-import Main from "@/layouts/Main.astro";
-import Header from "@/components/Header.astro";
-import Footer from "@/components/Footer.astro";
+import Layout from "@/layouts/AboutLayout.astro";
 import rawContests from "@/data/ctftime/ctf_events.json" assert { type: "json" };
 
 interface RawContest {
@@ -92,90 +89,62 @@ function getOrdinalSuffix(place: string): string {
   }
 }
 
-const pageTitle = "Achievements";
+const title = "Achievements";
 ---
 
-<Layout>
-  <Header activeNav="about" />
-  <Main pageTitle={pageTitle}>
-    <section>
-      <h2>🥇 Champions 👑</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Contest</th>
-          </tr>
-        </thead>
-        <tbody>
-          {champions.map(contest => (
-            <tr>
-              <td>
-                {getMedalEmoji(contest.place)} 
-                <a href={`https://ctftime.org/${contest.href}`} target="_blank" rel="noopener noreferrer">
-                  {contest.event}
-                </a>
-                {contest.year ? ` (${contest.year})` : ""} {getCrownEmoji(contest.place)}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </section>
+<Layout title={title}>
+  <h2>🥇 Champions 👑</h2>
+  <div class="contest-section">
+    <div class="contest-header">Contest</div>
+    {champions.map(contest => (
+      <div>
+        {getMedalEmoji(contest.place)} <a href={`https://ctftime.org/${contest.href}`} target="_blank" rel="noopener noreferrer">{contest.event}</a> ({contest.year}) {getCrownEmoji(contest.place)}
+      </div>
+    ))}
+  </div>
 
-    <section>
-      <h2>📈 Notable High Placements</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Contest</th>
-          </tr>
-        </thead>
-        <tbody>
-          {allNotablePlacements.map(contest => (
-            <tr>
-              <td>
-                {contest.specialDisplay ? (
-                  contest.specialDisplay
-                ) : (
-                  <>
-                    {getMedalEmoji(contest.place)} 
-                    <a href={`https://ctftime.org/${contest.href}`} target="_blank" rel="noopener noreferrer">
-                      {contest.event}
-                    </a>
-                    {contest.year ? ` (${contest.year})` : ""}
-                    {
-                      !isNaN(parseInt(contest.place)) && parseInt(contest.place) > 4 ? 
-                      ` - ${contest.place}${getOrdinalSuffix(contest.place)} Place` : 
-                      ""
-                    }
-                  </>
-                )}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </section>
+  <h2>📈 Notable High Placements</h2>
+  <div class="contest-section">
+    <div class="contest-header">Contest</div>
+    {allNotablePlacements.map(contest => (
+      <div>
+        {contest.specialDisplay ? (
+          contest.specialDisplay
+        ) : (
+          <>
+            {getMedalEmoji(contest.place)} <a href={`https://ctftime.org/${contest.href}`} target="_blank" rel="noopener noreferrer">{contest.event}</a> ({contest.year})
+            {!isNaN(parseInt(contest.place)) && parseInt(contest.place) > 4 
+              ? ` - ${contest.place}${getOrdinalSuffix(contest.place)} Place` 
+              : ""}
+          </>
+        )}
+      </div>
+    ))}
+  </div>
 
-    <section>
-      <h2>🇮🇩 National Events</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Event</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Organizing SNI CTF 2024</td></tr>
-          <tr><td>🥇1st Place - COMPFEST 2024, University of Indonesia (SNI FLAKEITO) 👑</td></tr>
-          <tr><td>🥈2nd Place - COMPFEST 2024, University of Indonesia (SNI Tabibito)</td></tr>
-          <tr><td>🥇1st Place - IFEST 2024, Padjajaran University (SNI Tabibito) 👑</td></tr>
-          <tr><td>🥉3rd Place - IFEST 2024, Padjajaran University (SNI FLAKEITO)</td></tr>
-          <tr><td>🥇1st Place - National Cyber Week 2024, BINUS University (SNI Tabibito) 👑</td></tr>
-          <tr><td>🥉3rd Place - Cyber Jawara National 2024, CSIRT.id and IdNSA (SNI Tabibito)</td></tr>
-        </tbody>
-      </table>
-    </section>
-  </Main>
-  <Footer />
+  <h2>🇮🇩 National Events</h2>
+  <div class="contest-section">
+    <div class="contest-header">Event</div>
+    <div>Organizing SNI CTF 2024</div>
+    <div>🥇1st Place - COMPFEST 2024, University of Indonesia (SNI FLAKEITO) 👑</div>
+    <div>🥈2nd Place - COMPFEST 2024, University of Indonesia (SNI Tabibito)</div>
+    <div>🥇1st Place - IFEST 2024, Padjajaran University (SNI Tabibito) 👑</div>
+    <div>🥉3rd Place - IFEST 2024, Padjajaran University (SNI FLAKEITO)</div>
+    <div>🥇1st Place - National Cyber Week 2024, BINUS University (SNI Tabibito) 👑</div>
+    <div>🥉3rd Place - Cyber Jawara National 2024, CSIRT.id and IdNSA (SNI Tabibito)</div>
+  </div>
+
+  <style>
+    .contest-section {
+      margin-bottom: 2rem;
+    }
+    .contest-header {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </Layout>
