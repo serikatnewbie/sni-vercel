@@ -1,57 +1,93 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "Achievements"
----
-
 import rawContests from "@/data/ctftime/ctf_events.json" assert { type: "json" };
 
-export const getEventDisplay = (contest) => {
-  const yearMatch = contest.event.match(/\b(20\d{2})\b/);
+interface RawContest {
+  place:        string;
+  event:        string;
+  href:         string;
+  ratingPoints: string;
+  ctfPoints:    string;
+}
+
+interface Contest {
+  place:        string;
+  event:        string;
+  href:         string;
+  ratingPoints: number;
+  ctfPoints:    string;
+  year:         number;
+}
+
+const rawList = rawContests as RawContest[];
+const contests: Contest[] = rawList.map((c) => {
+  const yearMatch = c.event.match(/\b(20\d{2})\b/);
   const year = yearMatch ? parseInt(yearMatch[1]) : 0;
+  
+  return {
+    place:        c.place,
+    event:        c.event,
+    href:         c.href,
+    ratingPoints: Number(c.ratingPoints),
+    ctfPoints:    c.ctfPoints,
+    year:         year,
+  };
+});
+
+contests.sort((a, b) => (b.year || 0) - (a.year || 0));
+
+const champions = contests.filter(contest => contest.place === "1");
+
+const notablePlacements = contests.filter(contest => {
   const place = parseInt(contest.place);
-  let medalEmoji = "";
-  
+  return place > 1 && place <= 10;
+});
+
+function getMedalEmoji(place: string): string {
   switch (place) {
-    case 1: medalEmoji = "🥇"; break;
-    case 2: medalEmoji = "🥈"; break;
-    case 3: medalEmoji = "🥉"; break;
-    case 4: medalEmoji = "🏅"; break;
+    case "1": return "🥇";
+    case "2": return "🥈";
+    case "3": return "🥉";
+    case "4": return "🏅";
+    default:  return "";
   }
-  
-  const crownEmoji = place === 1 ? "👑" : "";
-  const placeSuffix = place > 4 ? ` - ${place}${place === 9 || place === 10 ? "th" : ""} Place` : "";
-  
-  return `${medalEmoji} ${contest.event} (${year})${crownEmoji}${placeSuffix}`;
-};
+}
 
-export const champions = rawContests
-  .filter(contest => contest.place === "1")
-  .sort((a, b) => {
-    const yearA = a.event.match(/\b(20\d{2})\b/);
-    const yearB = b.event.match(/\b(20\d{2})\b/);
-    return (yearB ? parseInt(yearB[1]) : 0) - (yearA ? parseInt(yearA[1]) : 0);
-  });
+function getCrownEmoji(place: string): string {
+  return place === "1" ? "👑" : "";
+}
 
-export const notablePlacements = rawContests
-  .filter(contest => {
-    const place = parseInt(contest.place);
-    return place > 1 && place <= 10;
-  })
-  .sort((a, b) => {
-    const yearA = a.event.match(/\b(20\d{2})\b/);
-    const yearB = b.event.match(/\b(20\d{2})\b/);
-    return (yearB ? parseInt(yearB[1]) : 0) - (yearA ? parseInt(yearA[1]) : 0);
-  });
+function getOrdinalSuffix(place: number): string {
+  if (place % 100 >= 11 && place % 100 <= 13) {
+    return "th";
+  }
+  switch (place % 10) {
+    case 1: return "st";
+    case 2: return "nd";
+    case 3: return "rd";
+    default: return "th";
+  }
+}
+---
 
 ## 🥇 Champions 👑
 {champions.map(contest => (
-  <div>{getEventDisplay(contest)}</div>
+  <div>
+    {getMedalEmoji(contest.place)} {contest.event} ({contest.year}) {getCrownEmoji(contest.place)}
+  </div>
 ))}
 
 ## 📈 Notable High Placements
-{notablePlacements.map(contest => (
-  <div>{getEventDisplay(contest)}</div>
-))}
+{notablePlacements.map(contest => {
+  const place = parseInt(contest.place);
+  return (
+    <div>
+      {getMedalEmoji(contest.place)} {contest.event} ({contest.year})
+      {place > 4 ? ` - ${place}${getOrdinalSuffix(place)} Place` : ""}
+    </div>
+  );
+})}
 <div>Finalist - CDDC Brainhack 2024</div>
 
 ## 🇮🇩 National Events
