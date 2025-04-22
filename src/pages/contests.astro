@@ -50,6 +50,22 @@ function getMedalEmoji(place: string): string {
     default:  return "";
   }
 }
+
+const processedContests = contests.map(contest => {
+  const place = parseInt(contest.place, 10);
+  let rowClass = "";
+  
+  if (place > 10 && place <= 25) {
+    rowClass = "top25 hidden";
+  } else if (place > 25) {
+    rowClass = "beyond25 hidden";
+  }
+  
+  return {
+    ...contest,
+    rowClass
+  };
+});
 ---
 
 <Layout>
@@ -76,61 +92,50 @@ function getMedalEmoji(place: string): string {
           </tr>
         </thead>
         <tbody>
-          {contests.map((contest, i) => {
-            const place = parseInt(contest.place, 10);
-            let rowClass = "";
-            
-            if (place > 10 && place <= 25) {
-              rowClass = "top25 hidden";
-            } else if (place > 25) {
-              rowClass = "beyond25 hidden";
-            }
-            
-            return (
-              <tr
-                class={
-                  [
-                    i % 2 === 0
-                      ? "bg-white dark:bg-gray-800"
-                      : "bg-gray-50 dark:bg-gray-900",
-                    "border-b transition hover:bg-emerald-50 dark:border-gray-700 dark:hover:bg-gray-700",
-                    rowClass
-                  ]
-                    .filter(Boolean)
-                    .join(" ")
-                }
+          {processedContests.map((contest, i) => (
+            <tr
+              class={
+                [
+                  i % 2 === 0
+                    ? "bg-white dark:bg-gray-800"
+                    : "bg-gray-50 dark:bg-gray-900",
+                  "border-b transition hover:bg-emerald-50 dark:border-gray-700 dark:hover:bg-gray-700",
+                  contest.rowClass
+                ]
+                  .filter(Boolean)
+                  .join(" ")
+              }
+            >
+              <th
+                scope="row"
+                class="px-4 py-4 font-semibold whitespace-nowrap text-gray-900 dark:text-white"
               >
-                <th
-                  scope="row"
-                  class="px-4 py-4 font-semibold whitespace-nowrap text-gray-900 dark:text-white"
+                <div class="flex items-center">
+                  <div class="w-6">{getMedalEmoji(contest.place)}</div>
+                  <div class="ml-2 text-sm font-medium">{contest.place}</div>
+                </div>
+              </th>
+              <td class="px-6 py-4">
+                <a
+                  href={`https://ctftime.org/${contest.href}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="hover:underline"
                 >
-                  <div class="flex items-center">
-                    <div class="w-6">{getMedalEmoji(contest.place)}</div>
-                    <div class="ml-2 text-sm font-medium">{contest.place}</div>
-                  </div>
-                </th>
-                <td class="px-6 py-4">
-                  <a
-                    href={`https://ctftime.org/${contest.href}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="hover:underline"
-                  >
-                    {contest.event}
-                    {contest.year ? <span class="text-xs ml-2 text-gray-500">({contest.year})</span> : ""}
-                  </a>
-                </td>
-                <td class="px-6 py-4">
-                  <div class="text-emerald-600 dark:text-emerald-400">
-                    {contest.ratingPoints} rating points
-                  </div>
-                  <div class="text-blue-600 dark:text-blue-400">
-                    {Math.floor(Number(contest.ctfPoints))} CTF points
-                  </div>
-                </td>
-              </tr>
-            );
-          })}
+                  {contest.event}
+                  {contest.year ? <span class="text-xs ml-2 text-gray-500">({contest.year})</span> : ""}
+                </a>
+              </td>
+              <td class="px-6 py-4">
+                <div class="text-emerald-600 dark:text-emerald-400">
+                  {contest.ratingPoints} rating points
+                </div>
+                <div class="text-blue-600 dark:text-blue-400">
+                  {Math.floor(Number(contest.ctfPoints))} CTF points
+                </div>
+              </td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
