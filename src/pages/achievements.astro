@@ -1,150 +1,78 @@
 ---
-import Layout from "@/layouts/AboutLayout.astro";
-import rawContests from "@/data/ctftime/ctf_events.json" assert { type: "json" };
-
-interface RawContest {
-  place:        string;
-  event:        string;
-  href:         string;
-  ratingPoints: string;
-  ctfPoints:    string;
-}
-
-interface Contest {
-  place:        string;
-  event:        string;
-  href:         string;
-  ratingPoints: number;
-  ctfPoints:    string;
-  year:         number;
-  specialDisplay?: string;
-}
-
-const rawList = rawContests as RawContest[];
-const contests: Contest[] = rawList.map((c) => {
-  const yearMatch = c.event.match(/\b(20\d{2})\b/);
-  const year = yearMatch ? parseInt(yearMatch[1]) : 0;
-  
-  return {
-    place:        c.place,
-    event:        c.event,
-    href:         c.href,
-    ratingPoints: Number(c.ratingPoints),
-    ctfPoints:    c.ctfPoints,
-    year:         year,
-  };
-});
-
-contests.sort((a, b) => (b.year || 0) - (a.year || 0));
-
-const champions = contests.filter(contest => contest.place === "1");
-
-const notablePlacements = contests.filter(contest => {
-  const place = parseInt(contest.place);
-  return place > 1 && place <= 10;
-});
-
-const hardcodedAchievements = [
-  {
-    place: "finalist",
-    event: "CDDC Brainhack 2024",
-    href: "",
-    ratingPoints: 0,
-    ctfPoints: "",
-    year: 2024,
-    specialDisplay: "Finalist - CDDC Brainhack 2024"
-  }
-];
-
-const allNotablePlacements = [...notablePlacements, ...hardcodedAchievements];
-
-allNotablePlacements.sort((a, b) => (b.year || 0) - (a.year || 0));
-
-function getMedalEmoji(place: string): string {
-  switch (place) {
-    case "1": return "🥇";
-    case "2": return "🥈";
-    case "3": return "🥉";
-    case "4": return "🏅";
-    default:  return "";
-  }
-}
-
-function getCrownEmoji(place: string): string {
-  return place === "1" ? "👑" : "";
-}
-
-function getOrdinalSuffix(place: string): string {
-  const num = parseInt(place);
-  if (isNaN(num)) return "";
-  
-  if (num % 100 >= 11 && num % 100 <= 13) {
-    return "th";
-  }
-  switch (num % 10) {
-    case 1: return "st";
-    case 2: return "nd";
-    case 3: return "rd";
-    default: return "th";
-  }
-}
-
-const title = "Achievements";
+layout: ../layouts/AboutLayout.astro
+title: "Achievements"
 ---
 
-<Layout title={title}>
-  <h2>🥇 Champions 👑</h2>
-  <div class="contest-section">
-    <div class="contest-header">Contest</div>
-    {champions.map(contest => (
-      <div>
-        {getMedalEmoji(contest.place)} <a href={`https://ctftime.org/${contest.href}`} target="_blank" rel="noopener noreferrer">{contest.event}</a> ({contest.year}) {getCrownEmoji(contest.place)}
-      </div>
-    ))}
-  </div>
+import rawContests from "@/data/ctftime/ctf_events.json";
 
-  <h2>📈 Notable High Placements</h2>
-  <div class="contest-section">
-    <div class="contest-header">Contest</div>
-    {allNotablePlacements.map(contest => (
-      <div>
-        {contest.specialDisplay ? (
-          contest.specialDisplay
-        ) : (
-          <>
-            {getMedalEmoji(contest.place)} <a href={`https://ctftime.org/${contest.href}`} target="_blank" rel="noopener noreferrer">{contest.event}</a> ({contest.year})
-            {!isNaN(parseInt(contest.place)) && parseInt(contest.place) > 4 
-              ? ` - ${contest.place}${getOrdinalSuffix(contest.place)} Place` 
-              : ""}
-          </>
-        )}
-      </div>
-    ))}
-  </div>
+{(() => {
+  // Process the raw contests
+  const contests = rawContests.map((c) => {
+    const yearMatch = c.event.match(/\b(20\d{2})\b/);
+    const year = yearMatch ? parseInt(yearMatch[1]) : 0;
+    
+    return {
+      place: c.place,
+      event: c.event,
+      href: c.href,
+      ratingPoints: Number(c.ratingPoints),
+      ctfPoints: c.ctfPoints,
+      year: year,
+    };
+  });
 
-  <h2>🇮🇩 National Events</h2>
-  <div class="contest-section">
-    <div class="contest-header">Event</div>
-    <div>Organizing SNI CTF 2024</div>
-    <div>🥇1st Place - COMPFEST 2024, University of Indonesia (SNI FLAKEITO) 👑</div>
-    <div>🥈2nd Place - COMPFEST 2024, University of Indonesia (SNI Tabibito)</div>
-    <div>🥇1st Place - IFEST 2024, Padjajaran University (SNI Tabibito) 👑</div>
-    <div>🥉3rd Place - IFEST 2024, Padjajaran University (SNI FLAKEITO)</div>
-    <div>🥇1st Place - National Cyber Week 2024, BINUS University (SNI Tabibito) 👑</div>
-    <div>🥉3rd Place - Cyber Jawara National 2024, CSIRT.id and IdNSA (SNI Tabibito)</div>
-  </div>
+  contests.sort((a, b) => (b.year || 0) - (a.year || 0));
 
-  <style>
-    .contest-section {
-      margin-bottom: 2rem;
+  const champions = contests.filter(contest => contest.place === "1");
+
+  const notablePlacements = contests.filter(contest => {
+    const place = parseInt(contest.place);
+    return place > 1 && place <= 10;
+  });
+
+  function getMedalEmoji(place) {
+    switch (place) {
+      case "1": return "🥇";
+      case "2": return "🥈";
+      case "3": return "🥉";
+      case "4": return "🏅";
+      default:  return "";
     }
-    .contest-header {
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      margin-top: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-  </style>
-</Layout>
+  }
+
+  function getCrownEmoji(place) {
+    return place === "1" ? "👑" : "";
+  }
+
+  return (
+    <>
+      ## 🥇 Champions 👑
+      {champions.map(contest => (
+        <div>
+          {getMedalEmoji(contest.place)} {contest.event} ({contest.year}) {getCrownEmoji(contest.place)}
+        </div>
+      ))}
+
+      ## 📈 Notable High Placements
+      {notablePlacements.map(contest => {
+        const place = parseInt(contest.place);
+        return (
+          <div>
+            {getMedalEmoji(contest.place)} {contest.event} ({contest.year})
+            {place > 4 ? ` - ${place}${place === 9 ? "th" : place === 10 ? "th" : ""} Place` : ""}
+          </div>
+        );
+      })}
+      <div>Finalist - CDDC Brainhack 2024</div>
+
+      ## 🇮🇩 National Events
+      <div>Organizing SNI CTF 2024</div>
+      <div>🥇1st Place - COMPFEST 2024, University of Indonesia (SNI FLAKEITO) 👑</div>
+      <div>🥈2nd Place - COMPFEST 2024, University of Indonesia (SNI Tabibito)</div>
+      <div>🥇1st Place - IFEST 2024, Padjajaran University (SNI Tabibito) 👑</div>
+      <div>🥉3rd Place - IFEST 2024, Padjajaran University (SNI FLAKEITO)</div>
+      <div>🥇1st Place - National Cyber Week 2024, BINUS University (SNI Tabibito) 👑</div>
+      <div>🥉3rd Place - Cyber Jawara National 2024, CSIRT.id and IdNSA (SNI Tabibito)</div>
+    </>
+  );
+})()}
