@@ -1,5 +1,12 @@
 [
   {
+    "place": "21",
+    "event": "b01lers CTF 2025",
+    "ctfPoints": "5021.0000",
+    "ratingPoints": "15.916",
+    "href": "/event/2652"
+  },
+  {
     "place": "3",
     "event": "UMassCTF 2025",
     "ctfPoints": "9940.0000",
