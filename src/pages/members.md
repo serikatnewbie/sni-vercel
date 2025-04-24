@@ -191,6 +191,7 @@ title: "Members"
       </div>
     </div>
   </div>
+  
   <!-- Member 16 -->
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
     <img src="/avatars/wazeazure.png" alt="wazeazure" class="w-16 h-16 rounded-full" />
@@ -202,4 +203,17 @@ title: "Members"
       </div>
     </div>
   </div>
+
+    <!-- Member 17 -->
+  <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
+    <img src="/avatars/rui.png" alt="rui" class="w-16 h-16 rounded-full" />
+    <div>
+      <h3 class="font-bold">rui</h3>
+      <p class="text-sm">Cracked the neighbor’s WiFi just because the password was '12345678'.</p>
+      <div class="flex flex-wrap gap-1 mt-1">
+        <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
+      </div>
+    </div>
+  </div>
+  
 </div>
