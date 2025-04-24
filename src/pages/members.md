@@ -204,7 +204,7 @@ title: "Members"
     </div>
   </div>
 
-    <!-- Member 17 -->
+  <!-- Member 17 -->
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
     <img src="/avatars/rui.png" alt="rui" class="w-16 h-16 rounded-full" />
     <div>
@@ -216,4 +216,3 @@ title: "Members"
     </div>
   </div>
   
-</div>
