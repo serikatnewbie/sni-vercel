@@ -118,7 +118,7 @@ title: "Members"
     <img src="/avatars/dapa.png" alt="daptheHuman" class="w-16 h-16 rounded-full" />
     <div>
       <h3 class="font-bold">daptheHuman</h3>
-      <p class="text-sm">didnt receive the registration confirmation email</p>
+      <p class="text-sm">Got scammed by mrbert</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
