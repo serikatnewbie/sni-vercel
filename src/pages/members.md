@@ -11,7 +11,7 @@ title: "Members"
     <img src="/avatars/keii.jpg" alt="k.eii" class="w-16 h-16 rounded-full" />
     <div>
       <h3 class="font-bold">k.eii</h3>
-      <p class="text-sm">doing ml is lot easier than doing osint</p>
+      <p class="text-sm">killing AI with AI</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">for</span>
         <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">ai/ml</span>
@@ -118,7 +118,7 @@ title: "Members"
     <img src="/avatars/dapa.png" alt="daptheHuman" class="w-16 h-16 rounded-full" />
     <div>
       <h3 class="font-bold">daptheHuman</h3>
-      <p class="text-sm">Got scammed by mrbert</p>
+      <p class="text-sm">Got LSB’ed by mrbert</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
