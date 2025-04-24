@@ -56,7 +56,7 @@ title: "Members"
     <img src="https://serikatnewbie.github.io/static/images/avatar/player7.webp" alt="Darmodarr" class="w-16 h-16 rounded-full" />
     <div>
       <h3 class="font-bold">Darmodarr</h3>
-      <p class="text-sm">just broke up with Mizuhara Chizuru</p>
+      <p class="text-sm">just broke up with Mizuhara Chizuru, finding real one now</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">for</span>
         <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">blockchain</span>
