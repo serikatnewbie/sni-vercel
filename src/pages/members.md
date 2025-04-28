@@ -30,7 +30,7 @@ title: "Members"
       <p class="text-sm">Founder of SNI</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
-        <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
+        <span class="bg--200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
       </div>
       <p class="text-xs text-gray-600 mt-1">
         🌐 <a href="https://hackmd.io/@itoid" target="_blank" rel="noopener" class="text-blue-600 hover:underline">Blog</a>
@@ -71,7 +71,7 @@ title: "Members"
       <h3 class="font-bold">FlaB</h3>
       <p class="text-sm">this dude will wipe out all your challs</p>
       <div class="flex flex-wrap gap-1 mt-1">
-        <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
+        <span class="bg--200 text--800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
         <span class="bg-green-200 text-green-800 text-xs font-semibold px-2 py-0.5 rounded">blockchain</span>
       </div>
     </div>
@@ -79,10 +79,10 @@ title: "Members"
 
   <!-- Member 6 -->
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
-    <img src="https://avatars.githubusercontent.com/u/86491005?v=4" alt="yellow" class="w-16 h-16 rounded-full" />
+    <img src="https://avatars.githubusercontent.com/u/86491005?v=4" alt="" class="w-16 h-16 rounded-full" />
     <div>
-      <h3 class="font-bold">yellow</h3>
-      <p class="text-sm">pura pura lemah tapi sebenarnya raja kripto</p>
+      <h3 class="font-bold"></h3>
+      <p class="text-sm">有眼不识泰山</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-cyan-200 text-cyan-800 text-xs font-semibold px-2 py-0.5 rounded">cry</span>
       </div>
@@ -121,7 +121,7 @@ title: "Members"
       <p class="text-sm">Got LSB’ed by mrbert</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
-        <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
+        <span class="bg--200 text--800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
         <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">misc</span>
       </div>
       <p class="text-xs text-gray-600 mt-1">
