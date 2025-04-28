@@ -1,5 +1,12 @@
 [
   {
+    "place": "4",
+    "event": "UMDCTF 2025",
+    "ctfPoints": "15181.0000",
+    "ratingPoints": "82.261",
+    "href": "/event/2563"
+  },
+  {
     "place": "21",
     "event": "b01lers CTF 2025",
     "ctfPoints": "5021.0000",
@@ -24,7 +31,7 @@
     "place": "1",
     "event": "Breach CTF 2025",
     "ctfPoints": "7290.0000",
-    "ratingPoints": "47.340",
+    "ratingPoints": "47.540",
     "href": "/event/2671"
   },
   {
