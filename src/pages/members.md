@@ -1,4 +1,8 @@
-<!-- Updated Members List with consistent category colors -->
+---
+layout: ../layouts/AboutLayout.astro
+title: "Members"
+---
+
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
   <!-- Member 1 -->
   <div class="flex items-center space-x-4 px-4 py-6 border rounded-lg">
