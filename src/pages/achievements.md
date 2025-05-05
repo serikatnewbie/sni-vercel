@@ -33,9 +33,10 @@ title: "Achievements"
 | Event                                                                       |
 | --------------------------------------------------------------------------- |
 | Organizing SNI CTF 2024                                                     |
-| 🥇1st Place - COMPFEST 2024, University of Indonesia (SNI FLAKEITO) 👑      |
-| 🥈2nd Place - COMPFEST 2024, University of Indonesia (SNI Tabibito)         |
-| 🥇1st Place - IFEST 2024, Padjajaran University (SNI Tabibito) 👑           |
-| 🥉3rd Place - IFEST 2024, Padjajaran University (SNI FLAKEITO)              |
+| 🥇1st Place - COMPFEST 2024, Universitas Indonesia (SNI FLAKEITO) 👑        |
+| 🥈2nd Place - COMPFEST 2024, Universitas Indonesia (SNI Tabibito)           |
+| 🥇1st Place - IFEST 2024, Universitas Padjadjaran (SNI Tabibito) 👑         |
+| 🥉3rd Place - IFEST 2024, Universitas Padjadjaran (SNI FLAKEITO)            |
 | 🥇1st Place - National Cyber Week 2024, BINUS University (SNI Tabibito) 👑  |
 | 🥉3rd Place - Cyber Jawara National 2024, CSIRT.id and IdNSA (SNI Tabibito) |
+| 🥇1st Place - ARKAVIDIA 2025, Institut Teknologi Bandung (SNI CP ENJOYER) 👑|
