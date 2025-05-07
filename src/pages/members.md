@@ -11,6 +11,7 @@ title: "Members"
       <h3 class="font-bold">k.eii</h3>
       <p class="text-sm">killing AI with AI</p>
       <div class="flex flex-wrap gap-1 mt-1">
+        <span class="bg-gray-200 text-red-800 text-xs font-semibold px-2 py-0.5 rounded">founder</span>
         <span class="bg-blue-200 text-blue-800 text-xs font-semibold px-2 py-0.5 rounded">for</span>
         <span class="bg-purple-200 text-purple-800 text-xs font-semibold px-2 py-0.5 rounded">ai/ml</span>
       </div>
@@ -27,6 +28,7 @@ title: "Members"
       <h3 class="font-bold">itoid</h3>
       <p class="text-sm">Founder of SNI</p>
       <div class="flex flex-wrap gap-1 mt-1">
+        <span class="bg-gray-200 text-red-800 text-xs font-semibold px-2 py-0.5 rounded">founder</span>
         <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
         <span class="bg-yellow-200 text-yellow-800 text-xs font-semibold px-2 py-0.5 rounded">rev</span>
       </div>
