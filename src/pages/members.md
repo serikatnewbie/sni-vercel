@@ -26,7 +26,7 @@ title: "Members"
     <img src="/avatars/itoid.jpg" alt="itoid" class="w-16 h-16 rounded-full" />
     <div>
       <h3 class="font-bold">itoid</h3>
-      <p class="text-sm">Founder of SNI</p>
+      <p class="text-sm">idle and mmorpg games enjoyer</p>
       <div class="flex flex-wrap gap-1 mt-1">
         <span class="bg-gray-200 text-red-800 text-xs font-semibold px-2 py-0.5 rounded">founder</span>
         <span class="bg-orange-200 text-orange-800 text-xs font-semibold px-2 py-0.5 rounded">pwn</span>
