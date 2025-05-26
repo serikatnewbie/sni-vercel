@@ -32,7 +32,7 @@ title: "Achievements"
 
 | Event                                                                       |
 | --------------------------------------------------------------------------- |
-| Organizing SNI CTF 2024                                                     |
+| 🚩Organizing SNI CTF 2024 - SNI Cybersecurity Team                          |
 | 🥇1st Place - COMPFEST 2024, Universitas Indonesia (SNI FLAKEITO) 👑        |
 | 🥈2nd Place - COMPFEST 2024, Universitas Indonesia (SNI Tabibito)           |
 | 🥇1st Place - IFEST 2024, Universitas Padjadjaran (SNI Tabibito) 👑         |
