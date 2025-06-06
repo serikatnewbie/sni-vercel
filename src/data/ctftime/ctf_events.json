@@ -1,9 +1,30 @@
 [
   {
+    "place": "2",
+    "event": "Grey Cat The Flag 2025",
+    "ctfPoints": "16396.0000",
+    "ratingPoints": "47.339",
+    "href": "/event/2765"
+  },
+  {
+    "place": "61",
+    "event": "NahamCon CTF 2025",
+    "ctfPoints": "6857.0000",
+    "ratingPoints": "24.117",
+    "href": "/event/2782"
+  },
+  {
+    "place": "71",
+    "event": "Midnight Sun CTF 2025 Quals",
+    "ctfPoints": "307.0000",
+    "ratingPoints": "8.099",
+    "href": "/event/2632"
+  },
+  {
     "place": "86",
     "event": "UniVsThreats 25 CTF",
     "ctfPoints": "470.0000",
-    "ratingPoints": "1.894",
+    "ratingPoints": "1.900",
     "href": "/event/2726"
   },
   {
@@ -94,7 +115,7 @@
     "place": "61",
     "event": "PwnMe CTF Quals 2025",
     "ctfPoints": "1455.0000",
-    "ratingPoints": "4.139",
+    "ratingPoints": "4.141",
     "href": "/event/2658"
   },
   {

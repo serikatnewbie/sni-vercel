@@ -18,7 +18,7 @@ title: "Achievements"
 | Contest                                      |
 | -------------------------------------------- |
 | 🥈 Space Heroes 2024                         |
-| 🥈 Shakti CTF                                |
+| 🥈 Shakti CTF 2024                           |
 | 🥉 Nullcon Berlin HackIM 2024 CTF            |
 | 🏅 SunshineCTF 2024                          |
 | 🏅 UNbreakable International 2024            |
@@ -27,6 +27,7 @@ title: "Achievements"
 | Finalist - CDDC Brainhack 2024               |
 | 🥉 UMassCTF 2025                             |
 | 🏅 UMDCTF 2025                               |
+| 🥈 Grey Cat The Flag 2025                    |
 
 ## 🇮🇩 National Events
 
