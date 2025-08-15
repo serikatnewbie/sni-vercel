@@ -1,5 +1,19 @@
 [
   {
+    "place": "27",
+    "event": "L3akCTF 2025",
+    "ctfPoints": "4862.0000",
+    "ratingPoints": "9.112",
+    "href": "/event/2629"
+  },
+  {
+    "place": "65",
+    "event": "R3CTF 2025",
+    "ctfPoints": "1000.0000",
+    "ratingPoints": "1.485",
+    "href": "/event/2731"
+  },
+  {
     "place": "2",
     "event": "Grey Cat The Flag 2025",
     "ctfPoints": "16396.0000",
@@ -582,7 +596,7 @@
   },
   {
     "place": "2",
-    "event": "Shakti CTF",
+    "event": "Shakti CTF 2024",
     "ctfPoints": "5050.0000",
     "ratingPoints": "34.799",
     "href": "/event/2268"
