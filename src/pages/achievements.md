@@ -42,3 +42,4 @@ title: "Achievements"
 | 🥉3rd Place - Cyber Jawara National 2024, CSIRT.id and IdNSA (SNI Tabibito) |
 | 🥇1st Place - ARKAVIDIA 2025, Institut Teknologi Bandung (SNI CP ENJOYER) 👑|
 | 🥇1st Place - ITSEC ASIA SUMMIT 2025, PT ITSEC ASIA TBK (SNI FLAREITO) 👑|
+| 🚩Organizing Wreck IT 6.0 General Qualifier - SNI Cybersecurity Team        |
